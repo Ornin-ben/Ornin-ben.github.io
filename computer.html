@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ด้านคอมพิวเตอร์ | Boom Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="container">
+    <div class="brand">
+      <div>
+        <h1>ด้านคอมพิวเตอร์</h1>
+        <p>AI • Web • Coding projects</p>
+      </div>
+      <div class="badge"><a href="index.html">← กลับ Home</a></div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container navbar">
+      <a class="navlink" href="index.html">Home</a>
+      <a class="navlink" href="research.html">งานวิจัย</a>
+      <a class="navlink active" href="computer.html">ด้านคอมพิวเตอร์</a>
+      <a class="navlink" href="interests.html">สิ่งที่สนใจ</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="section">
+      <h2>Computer Projects</h2>
+
+      <div class="grid">
+        <article class="card">
+          <h3>AI Hackathon Project</h3>
+          <p class="small">Problem → Data → Model → Impact</p>
+          <ul class="list">
+            <li>ปัญหา: (ใส่)</li>
+            <li>โมเดล/เครื่องมือ: (เช่น CV, NLP, LLM)</li>
+            <li>ผลลัพธ์: (metric/impact)</li>
+          </ul>
+
+          <div class="btnrow">
+            <button class="btn secondary" onclick="toggleBlock('c1')">สลับดู “เกียรติบัตร”</button>
+          </div>
+
+          <div id="c1" style="display:none; margin-top:10px">
+            <div class="card" style="padding:12px">
+              <h4 style="margin:0 0 6px">เกียรติบัตรสายคอมพิวเตอร์</h4>
+              <ul class="list">
+                <li>(ใส่รายการ)</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Website / Portfolio</h3>
+          <p class="small">HTML • CSS • JavaScript • GitHub Pages</p>
+          <ul class="list">
+            <li>สิ่งที่ทำได้: multi-page, responsive, interactive buttons</li>
+            <li>สิ่งที่จะเพิ่มต่อ: certificates gallery / popup / timeline</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© 2026 ornin Portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

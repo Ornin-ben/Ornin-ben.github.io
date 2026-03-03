@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boom | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="container">
+    <div class="brand">
+      <div>
+        <h1>Pakkad ornin</h1>
+        <p>Portfolio • Research • Computer Projects</p>
+      </div>
+      <div class="badge">M.5 | Updated <span id="y"></span></div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="container navbar">
+      <a class="navlink active" href="index.html">Home</a>
+      <a class="navlink" href="research.html">งานวิจัย</a>
+      <a class="navlink" href="computer.html">ด้านคอมพิวเตอร์</a>
+      <a class="navlink" href="interests.html">สิ่งที่สนใจ</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <div class="card">
+        <h2>hello world</h2>
+        <p class="note">
+          นี่คือเว็บไซต์พอร์ตฟอลิโอ  สำหรับรวบรวมผลงาน งานวิจัย และเกียรติบัตร
+          (สามารถกดปุ่ม/สลับแสดงข้อมูลได้)
+        </p>
+
+        <div class="btnrow">
+          <button class="btn" onclick="showGoal()">กดดูเป้าหมาย</button>
+          <a class="btn secondary" href="research.html">ไปหน้า งานวิจัย</a>
+        </div>
+        <p id="goalText" class="small"></p>
+
+        <hr class="sep" />
+
+        <h3>Highlights</h3>
+        <div class="kv">
+          <span class="pill">Computer engineer</span>
+          <span class="pill">scius tu</span>
+          <span class="pill">music</span>
+          <span class="pill">AI / Hackathon</span>
+        </div>
+      </div>
+
+      <div class="card profile">
+        <img src="profile.jpg" alt="profile" />
+        <div>
+          <p class="small" style="margin:0">About me</p>
+          <p style="margin:6px 0 0">
+            นักเรียน ม.5 วมว มธ สกร
+          </p>
+          <p class="small" style="margin:10px 0 0">
+            Contact: <a href="mailto:skr20088@tkt.ac.th">ig : p.april_18</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Quick Links</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>งานวิจัย</h3>
+          <p class="small">โปรเจกต์ + เกียรติบัตรสายวิจัย</p>
+          <a class="btn secondary" href="research.html">เปิด</a>
+        </div>
+        <div class="card">
+          <h3>ด้านคอมพิวเตอร์</h3>
+          <p class="small">AI / เว็บ / โปรเจกต์โค้ด</p>
+          <a class="btn secondary" href="computer.html">เปิด</a>
+        </div>
+        <div class="card">
+          <h3>สิ่งที่สนใจ</h3>
+          <p class="small">หัวข้อที่อยากเรียน/ทำต่อ</p>
+          <a class="btn secondary" href="interests.html">เปิด</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="yy"></span> ornin Portfolio</p>
+  </footer>
+
+  <script>
+    const y = new Date().getFullYear();
+    document.getElementById("y").textContent = y;
+    document.getElementById("yy").textContent = y;
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
