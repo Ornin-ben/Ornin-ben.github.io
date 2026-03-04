@@ -70,23 +70,94 @@
       </div>
 
       <!-- Camp -->
-      <div class="glass acc-item">
-        <button class="acc-btn" data-acc="accCamp">
-          <span><i class="fa-solid fa-campground"></i> กิจกรรมค่าย</span>
-          <i class="fa-solid fa-chevron-down" data-chevron style="transition:transform 180ms ease"></i>
+<div class="glass acc-item">
+  <button class="acc-btn" data-acc="accCamp">
+    <span><i class="fa-solid fa-campground"></i> กิจกรรมค่าย</span>
+    <i class="fa-solid fa-chevron-down" data-chevron style="transition:transform 180ms ease"></i>
+  </button>
+
+  <div class="acc-panel" id="accCamp">
+
+    <!-- Camp #1 LG -->
+    <div style="margin-top:10px;">
+      <div class="carousel" id="carCamp1">
+        <button class="car-btn left" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+        <img alt="Camp 1 photos" />
+        <button class="car-btn right" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="dots"></div>
+      </div>
+
+      <h3 style="margin:12px 0 0; font-family:Kanit, sans-serif;">LARNGEAR 25th CAMP  </h3>
+      <p style="margin:6px 0 0;" class="profile-text">: 23-26 DEC 2025 (ค้างคืน)<br/><br/> <b>น้องค่ายบ้าน TUA SECRET!! </b><br/> กิจกรรมค่ายวิศวกรรมศาสตร์ที่จุฬา จัดโดยพี่ ๆ วิศวะปี 1 สนุกมาก ๆ และได้ connection กับพี่ ๆ เยอะด้วย หวังว่าจะได้เจอพี่พี่อีกในรั้ววิศวะจุฬา^^</p>
+    
+       <div class="camp-links">
+  
+  <a href="https://instagram.com/larngear_camp" target="_blank" class="ig-bubble">
+    <i class="fa-brands fa-instagram"></i>
+    <span>larngear_camp</span>
+  </a>
+
+  <a href="https://instagram.com/tuasecret.dedjud" target="_blank" class="ig-bubble">
+    <i class="fa-brands fa-instagram"></i>
+    <span>tuasecret.dedjud</span>
+  </a>
+
+</div>
+
+    </div>
+
+    <hr style="border:none;border-top:1px solid rgba(255,255,255,0.12); margin:16px 0;">
+
+    <!-- Camp #2 CUEE -->
+    <div>
+      <div class="carousel" id="carCamp2">
+        <button class="car-btn left" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+        <img alt="Camp 2 photos" />
+        <button class="car-btn right" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="dots"></div>
+      </div>
+
+      <h3 style="margin:12px 0 0; font-family:Kanit, sans-serif;">CUEE 3rd</h3>
+      <p style="margin:6px 0 0;" class="profile-text">: MARCH 2026 <br/><br/>ค่ายวิศวกรรมไฟฟ้าจัดโดยพี่ ๆ นิสิตวิศวกรรมไฟฟ้าจุฬา<br/>COMING SOON...</p>
+    </div>
+
+    <hr style="border:none;border-top:1px solid rgba(255,255,255,0.12); margin:16px 0;">
+
+    <!-- Camp #3 CUEE -->
+    <div>
+      <div class="carousel" id="carCamp3">
+        <button class="car-btn left" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+        <img alt="Camp 3 photos" />
+        <button class="car-btn right" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="dots"></div>
+      </div>
+
+      <h3 style="margin:12px 0 0; font-family:Kanit, sans-serif;">ค่ายฝึกทักษะวิจัยภาคฤดูร้อน NSTDA : NECTEC</h3>
+      <p style="margin:6px 0 0;" class="profile-text">: MARCH-MAY 2026 (ค่ายระยะยาว)<br/><br/>COMING SOON...</p>
+    </div>
+
+  </div>
+</div>
+
+         <!-- POSN -->
+        <div class="glass acc-item">
+        <button class="acc-btn" data-acc="accPosn">
+            <span><i class="fa-solid fa-award"></i> POSN / ค่าย สอวน.</span>
+            <i class="fa-solid fa-chevron-down" data-chevron style="transition:transform 180ms ease"></i>
         </button>
-        <div class="acc-panel" id="accCamp">
-          <div class="carousel" id="carCamp">
+
+        <div class="acc-panel" id="accPosn">
+            <div class="carousel" id="carPosn">
             <button class="car-btn left" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
-            <img alt="Camp photos" />
+            <img alt="POSN photos" />
             <button class="car-btn right" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
             <div class="dots"></div>
-          </div>
+            </div>
 
-          <h3 style="margin:12px 0 0; font-family:Kanit, sans-serif;">LARNGEAR 25th CAMP</h3>
-          <p style="margin:6px 0 0;" class="profile-text">เข้าร่วมกิจกรรมค่ายที่จุฬา</p>
+            <h3 style="margin:12px 0 0; font-family:Kanit, sans-serif;">POSN Camp (wip)</h3>
+            <p style="margin:6px 0 0;" class="profile-text">กำลังเตรียมรูป/รายละเอียด</p>
         </div>
-      </div>
+        </div>
 
       <!-- Other -->
       <div class="glass acc-item">
@@ -113,13 +184,19 @@
       "assets/images/achievement/science/sp4.jpg"
     ]);
 
-    setupCarousel("carCamp", [
+    setupCarousel("carCamp1", [
       "assets/images/achievement/camp/camp1.jpg",
       "assets/images/achievement/camp/camp2.jpg",
       "assets/images/achievement/camp/camp3.jpg",
       "assets/images/achievement/camp/camp4.jpg",
       "assets/images/achievement/camp/camp5.jpg"
     ]);
+    
+     setupCarousel("carPosn", [
+    "assets/images/achievement/camp/camp1.jpg",
+    "assets/images/achievement/camp/camp2.jpg"
+  ]);
+
   </script>
 </body>
 </html>
