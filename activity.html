@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pakkad | Activity</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;700&family=Sarabun:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="topbar">
+      <div class="badge">M.5 | Updated 2026 March</div>
+    </div>
+    <div class="header">
+      <div>
+        <h1>Activity</h1>
+        <p class="subtitle">กิจกรรมที่เคยทำ</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav">
+    <div class="container">
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="achievement.html">Achievement</a>
+        <a href="activity.html">Activity</a>
+        <a href="art.html">Art gallery</a>
+        <a href="hobby.html">Hobby</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="container section">
+    <div class="glass page-title">
+      <h2><i class="fa-solid fa-star" style="color:var(--accent2)"></i> Activity</h2>
+      <p>ใส่รูป + คำอธิบายใต้ภาพ</p>
+    </div>
+
+    <section class="section glass profile-wrap">
+      <div class="gallery">
+        <img data-lightbox src="assets/images/activity/act1.jpg" alt="activity 1">
+        <img data-lightbox src="assets/images/activity/act2.jpg" alt="activity 2">
+        <img data-lightbox src="assets/images/activity/act3.jpg" alt="activity 3">
+      </div>
+      <p class="profile-text" style="margin-top:10px;">กิจกรรมรับเพื่อนใหม่ วมว. ให้น้องรุ่น 11</p>
+
+      <div class="gallery" style="margin-top:14px;">
+        <img data-lightbox src="assets/images/activity/act4.jpg" alt="activity 4">
+      </div>
+      <p class="profile-text" style="margin-top:10px;">พิธีกรปฐมนิเทศ วมว. ให้น้องรุ่น 11</p>
+
+      <p class="profile-text" style="margin-top:14px;">งาน oncee วมว. (เพิ่มรูปได้ภายหลัง)</p>
+      <p class="profile-text" style="margin-top:6px;">กิจกรรม work shop ให้น้อง ๆ ประถม ที่ มธ (เพิ่มรูปได้ภายหลัง)</p>
+    </section>
+
+    <div class="footer">© <span data-year></span> Portfolio</div>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <img alt="preview">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -3,101 +3,157 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pakkad | Portfolio</title>
+  <title>Pakkad | About me</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;700&family=Sarabun:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header class="container">
-    <div class="brand">
+  <div class="container">
+    <div class="topbar">
+      <div class="lang-toggle" title="Toggle language (only About section)">
+        <button id="btnTH" class="active">TH</button>
+        <button id="btnEN">EN</button>
+      </div>
+      <div class="badge">M.5 | Updated 2026 March</div>
+    </div>
+
+    <div class="header">
       <div>
-        <h1>Pakkad ornin</h1>
-        <p>Portfolio • Research • Computer Projects</p>
+        <h1>Pakkad</h1>
+        <p class="subtitle">Portfolio • About me • Contact</p>
       </div>
-      <div class="badge">M.5 | Updated <span id="y"></span></div>
     </div>
-  </header>
+  </div>
 
-  <nav>
-    <div class="container navbar">
-      <a class="navlink active" href="index.html">Home</a>
-      <a class="navlink" href="research.html">งานวิจัย</a>
-      <a class="navlink" href="computer.html">ด้านคอมพิวเตอร์</a>
-      <a class="navlink" href="interests.html">สิ่งที่สนใจ</a>
+  <div class="nav">
+    <div class="container">
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="achievement.html">Achievement</a>
+        <a href="activity.html">Activity</a>
+        <a href="art.html">Art gallery</a>
+        <a href="hobby.html">Hobby</a>
+      </div>
     </div>
-  </nav>
+  </div>
 
-  <main class="container">
-    <section class="hero">
-      <div class="card">
-        <h2>hello world</h2>
-        <p class="note">
-          นี่คือเว็บไซต์พอร์ตฟอลิโอ  สำหรับรวบรวมผลงาน งานวิจัย และเกียรติบัตร
-          (สามารถกดปุ่ม/สลับแสดงข้อมูลได้)
-        </p>
+  <main class="container section">
+    <div class="grid-2">
 
-        <div class="btnrow">
-          <button class="btn" onclick="showGoal()">กดดูเป้าหมาย</button>
-          <a class="btn secondary" href="research.html">ไปหน้า งานวิจัย</a>
+      <!-- LEFT: Profile carousel -->
+      <div class="glass profile-wrap">
+        <div class="carousel" id="carProfile">
+          <button class="car-btn left" aria-label="Previous">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <img alt="Profile photo carousel" />
+          <button class="car-btn right" aria-label="Next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+          <div class="dots"></div>
         </div>
-        <p id="goalText" class="small"></p>
 
-        <hr class="sep" />
-
-        <h3>Highlights</h3>
-        <div class="kv">
-          <span class="pill">Computer engineer</span>
-          <span class="pill">scius tu</span>
-          <span class="pill">music</span>
-          <span class="pill">AI / Hackathon</span>
+        <div class="quote">
+          เว็บไซต์นี้สร้างขึ้นเพื่อให้เพื่อน ๆ พี่ ๆ หรือผู้ใหญ่ทุกคนได้มารู้จักกันมากขึ้น ทั้งด้านผลงานและความสนใจส่วนตัว
+          ถ้าใครอยากมาคุยกันหรือสงสัยเกี่ยวกับงานส่วนไหนยินดีพูดคุย ทักมาได้เสมอ
+          <div class="en">“The wind is rising, We must try to live”</div>
         </div>
       </div>
 
-      <div class="card profile">
-        <img src="profile.jpg" alt="profile" />
-        <div>
-          <p class="small" style="margin:0">About me</p>
-          <p style="margin:6px 0 0">
-            นักเรียน ม.5 วมว มธ สกร
-          </p>
-          <p class="small" style="margin:10px 0 0">
-            Contact: <a href="mailto:skr20088@tkt.ac.th">ig : p.april_18</a>
-          </p>
-        </div>
-      </div>
-    </section>
+      <!-- RIGHT: About + Contact (TH/EN toggle only here) -->
+      <div class="glass profile-wrap">
 
+        <div data-lang="th">
+          <h2 class="profile-title">About me</h2>
+          <p class="profile-name">นางสาวอรอินทุ์ เบญจบริรักษ์กุล (ผักกาด)</p>
+          <p class="profile-meta">นักเรียน ม.5 วมว. มธ. สกร.<br/>SCIUS TU 10</p>
+        </div>
+
+        <div data-lang="en" style="display:none">
+          <h2 class="profile-title">About me</h2>
+          <p class="profile-name">Ornin bentaborirakkun (Pakkad)</p>
+          <p class="profile-meta">M.5 student from SCIUSTU<br/>SCIUS TU 10</p>
+        </div>
+
+        <div class="contact">
+          <a href="#" onclick="navigator.clipboard.writeText('pakkad-18'); return false;">
+            <i class="fa-brands fa-line"></i>
+            <span>Line ID: pakkad-18 (click to copy)</span>
+          </a>
+
+          <a href="https://instagram.com/p.april_18" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-instagram"></i>
+            <span>IG: p.april_18</span>
+          </a>
+
+          <a href="mailto:p.april18p@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+            <span>Email: p.april18p@gmail.com</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 4 blocks -->
     <section class="section">
-      <h2>Quick Links</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>งานวิจัย</h3>
-          <p class="small">โปรเจกต์ + เกียรติบัตรสายวิจัย</p>
-          <a class="btn secondary" href="research.html">เปิด</a>
-        </div>
-        <div class="card">
-          <h3>ด้านคอมพิวเตอร์</h3>
-          <p class="small">AI / เว็บ / โปรเจกต์โค้ด</p>
-          <a class="btn secondary" href="computer.html">เปิด</a>
-        </div>
-        <div class="card">
-          <h3>สิ่งที่สนใจ</h3>
-          <p class="small">หัวข้อที่อยากเรียน/ทำต่อ</p>
-          <a class="btn secondary" href="interests.html">เปิด</a>
-        </div>
+      <div class="cards4">
+        <a class="cardlink" href="achievement.html">
+          <div class="icon"><i class="fa-solid fa-trophy"></i></div>
+          <div>
+            <h3>Achievement</h3>
+            <p>ผลงาน/รางวัล/เกียรติบัตร</p>
+          </div>
+        </a>
+
+        <a class="cardlink" href="activity.html">
+          <div class="icon"><i class="fa-solid fa-star"></i></div>
+          <div>
+            <h3>Activity</h3>
+            <p>กิจกรรมต่าง ๆ ที่เคยทำ</p>
+          </div>
+        </a>
+
+        <a class="cardlink" href="art.html">
+          <div class="icon"><i class="fa-solid fa-palette"></i></div>
+          <div>
+            <h3>Art gallery</h3>
+            <p>งานวาด/งานศิลปะ</p>
+          </div>
+        </a>
+
+        <a class="cardlink" href="hobby.html">
+          <div class="icon"><i class="fa-solid fa-heart"></i></div>
+          <div>
+            <h3>Hobby</h3>
+            <p>งานอดิเรก/สิ่งที่ชอบ</p>
+          </div>
+        </a>
       </div>
     </section>
+
+    <div class="footer">© <span data-year></span> Portfolio</div>
   </main>
 
-  <footer class="container footer">
-    <p>© <span id="yy"></span> ornin Portfolio</p>
-  </footer>
-
-  <script>
-    const y = new Date().getFullYear();
-    document.getElementById("y").textContent = y;
-    document.getElementById("yy").textContent = y;
-  </script>
   <script src="script.js"></script>
+  <script>
+    // Profile carousel images (5)
+    setupCarousel("carProfile", [
+      "assets/images/profiles/profile1.jpg",
+      "assets/images/profiles/profile2.jpg",
+      "assets/images/profiles/profile3.jpg",
+      "assets/images/profiles/profile4.jpg",
+      "assets/images/profiles/profile5.jpg"
+    ]);
+  </script>
 </body>
 </html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pakkad | Hobby</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;700&family=Sarabun:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="topbar">
+      <div class="badge">M.5 | Updated 2026 March</div>
+    </div>
+    <div class="header">
+      <div>
+        <h1>Hobby</h1>
+        <p class="subtitle">สิ่งที่ชอบ • งานอดิเรก</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav">
+    <div class="container">
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="achievement.html">Achievement</a>
+        <a href="activity.html">Activity</a>
+        <a href="art.html">Art gallery</a>
+        <a href="hobby.html">Hobby</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="container section">
+    <div class="glass page-title">
+      <h2><i class="fa-solid fa-heart" style="color:var(--accent2)"></i> Hobby</h2>
+      <p>งานอดิเรกงานคราฟต่าง ๆ ที่เคยทำ</p>
+    </div>
+
+    <section class="section glass profile-wrap">
+      <h3 style="margin:0; font-family:Kanit, sans-serif;">Music</h3>
+      <p class="profile-text" style="margin:6px 0 0;">เปียโน • ขิม • กีตาร์</p>
+
+      <hr class="sep">
+
+      <h3 style="margin:0; font-family:Kanit, sans-serif;">Artist</h3>
+      <p class="profile-text" style="margin:6px 0 0;">tattoocolour polycat</p>
+
+      <hr class="sep">
+
+      <h3 style="margin:0; font-family:Kanit, sans-serif;">Favorite song</h3>
+      <div class="gallery" style="grid-template-columns: 1fr 1fr; margin-top:10px;">
+        <img data-lightbox src="assets/images/hobby/album1.jpg" alt="album">
+        <img data-lightbox src="assets/images/hobby/hobby1.jpg" alt="hobby">
+      </div>
+      <p class="profile-text" style="margin-top:10px;">
+        (ใส่ชื่อเพลง + เวลาเปิดเพลงได้ภายหลัง) — เดี๋ยวคุณส่งรูปอัลบั้มมาแล้วค่อยเติมรายละเอียด
+      </p>
+
+      <hr class="sep">
+
+      <h3 style="margin:0; font-family:Kanit, sans-serif;">Sport</h3>
+      <p class="profile-text" style="margin:6px 0 0;">
+        football | premia league ; Im citizen !!
+        <span style="color:#8fd3ff;">💙</span>
+      </p>
+
+      <div class="gallery" style="margin-top:12px;">
+        <img data-lightbox src="assets/images/hobby/hobby2.jpg" alt="sport or hobby">
+      </div>
+    </section>
+
+    <div class="footer">© <span data-year></span> Portfolio</div>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <button class="close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <img alt="preview">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

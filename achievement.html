@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pakkad | Achievement</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;700&family=Sarabun:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="topbar">
+      <div class="badge">M.5 | Updated 2026 March</div>
+    </div>
+    <div class="header">
+      <div>
+        <h1>Achievement</h1>
+        <p class="subtitle">ผลงาน • รางวัล • เกียรติบัตร</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav">
+    <div class="container">
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="achievement.html">Achievement</a>
+        <a href="activity.html">Activity</a>
+        <a href="art.html">Art gallery</a>
+        <a href="hobby.html">Hobby</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="container section">
+    <div class="glass page-title">
+      <h2><i class="fa-solid fa-trophy" style="color:var(--accent2)"></i> Achievement</h2>
+      <p>คลิกแต่ละบล็อกเพื่อดูรายละเอียด (accordion)</p>
+    </div>
+
+    <section class="section accordion">
+
+      <!-- Science project -->
+      <div class="glass acc-item">
+        <button class="acc-btn" data-acc="accScience">
+          <span><i class="fa-solid fa-flask"></i> Science project / โครงงานวิจัย</span>
+          <i class="fa-solid fa-chevron-down" data-chevron style="transition:transform 180ms ease"></i>
+        </button>
+        <div class="acc-panel" id="accScience">
+          <div class="carousel" id="carScience">
+            <button class="car-btn left" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+            <img alt="Science project photos" />
+            <button class="car-btn right" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="dots"></div>
+          </div>
+
+          <p style="margin-top:12px;">รายละเอียดโครงงาน <b>wip</b></p>
+
+          <ul class="awards">
+            <li>YSC 2026 | champion of ES ภาคกลางและตะวันออก <span class="check"><i class="fa-solid fa-check"></i></span></li>
+            <li>(เพิ่มรางวัลอื่น ๆ ได้ภายหลัง) <span class="check"><i class="fa-solid fa-check"></i></span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Camp -->
+      <div class="glass acc-item">
+        <button class="acc-btn" data-acc="accCamp">
+          <span><i class="fa-solid fa-campground"></i> กิจกรรมค่าย</span>
+          <i class="fa-solid fa-chevron-down" data-chevron style="transition:transform 180ms ease"></i>
+        </button>
+        <div class="acc-panel" id="accCamp">
+          <div class="carousel" id="carCamp">
+            <button class="car-btn left" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+            <img alt="Camp photos" />
+            <button class="car-btn right" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="dots"></div>
+          </div>
+
+          <h3 style="margin:12px 0 0; font-family:Kanit, sans-serif;">LARNGEAR 25th CAMP</h3>
+          <p style="margin:6px 0 0;" class="profile-text">เข้าร่วมกิจกรรมค่ายที่จุฬา</p>
+        </div>
+      </div>
+
+      <!-- Other -->
+      <div class="glass acc-item">
+        <button class="acc-btn" data-acc="accOther">
+          <span><i class="fa-solid fa-people-group"></i> กิจกรรมอื่น ๆ ที่เข้าร่วม</span>
+          <i class="fa-solid fa-chevron-down" data-chevron style="transition:transform 180ms ease"></i>
+        </button>
+        <div class="acc-panel" id="accOther">
+          <p>กิจกรรมอื่น ๆ อีกมากมาย</p>
+        </div>
+      </div>
+
+    </section>
+
+    <div class="footer">© <span data-year></span> Portfolio</div>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    setupCarousel("carScience", [
+      "assets/images/achievement/science/sp1.jpg",
+      "assets/images/achievement/science/sp2.jpg",
+      "assets/images/achievement/science/sp3.jpg",
+      "assets/images/achievement/science/sp4.jpg"
+    ]);
+
+    setupCarousel("carCamp", [
+      "assets/images/achievement/camp/camp1.jpg",
+      "assets/images/achievement/camp/camp2.jpg",
+      "assets/images/achievement/camp/camp3.jpg",
+      "assets/images/achievement/camp/camp4.jpg",
+      "assets/images/achievement/camp/camp5.jpg"
+    ]);
+  </script>
+</body>
+</html>

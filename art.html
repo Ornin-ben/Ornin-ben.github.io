@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pakkad | Art gallery</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;700&family=Sarabun:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="topbar">
+      <div class="badge">M.5 | Updated 2026 March</div>
+    </div>
+    <div class="header">
+      <div>
+        <h1>Art gallery</h1>
+        <p class="subtitle">งานศิลปะ • งานวาด</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav">
+    <div class="container">
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="achievement.html">Achievement</a>
+        <a href="activity.html">Activity</a>
+        <a href="art.html">Art gallery</a>
+        <a href="hobby.html">Hobby</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="container section">
+    <div class="glass page-title">
+      <h2><i class="fa-solid fa-palette" style="color:var(--accent2)"></i> Art gallery</h2>
+      <p>เป็นคนชอบงานศิลปะมาก ๆ วาดภาพเป็นงานอดิเรก</p>
+    </div>
+
+    <section class="section glass profile-wrap">
+      <div class="gallery">
+        <img data-lightbox src="assets/images/art/art1.jpg" alt="art 1">
+        <img data-lightbox src="assets/images/art/art2.jpg" alt="art 2">
+        <img data-lightbox src="assets/images/art/art3.jpg" alt="art 3">
+      </div>
+      <p class="profile-text" style="margin-top:10px;">(ตอนนี้เป็นโปรโตไทป์ 3 ภาพก่อน ค่อยเติมทีหลังได้)</p>
+    </section>
+
+    <div class="footer">© <span data-year></span> Portfolio</div>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <button class="close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <img alt="preview">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
