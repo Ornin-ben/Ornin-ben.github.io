@@ -1,459 +1,866 @@
-:root{
-  --bg1:#0b0b0f;
-  --bg2:#2b0008;
-  --bg3:#0a0a12;
+ @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+/* เลือกฟอนต์แนว Pixel จาก Google Fonts หรือใช้ที่มีในเครื่อง */
 
-  --glass: rgba(255,255,255,0.12);
-  --glass2: rgba(255,255,255,0.08);
-  --border: rgba(255,255,255,0.18);
 
-  --text:#f5f5f7;
-  --muted: rgba(245,245,247,0.72);
-
-  --accent:#ff3b6a;
-  --accent2:#ffb3c1;
-  --ok:#43e97b;
-
-  --radius: 18px;
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('assets/images/BG.png');
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    background-position: left center; 
+    background-color: #d1cfc7; /* สีพื้นหลังครีมเทา */
+    font-family: 'Courier New', Courier, monospace;
+    color: #333;
+    overflow-x: hidden; /* ห้ามเลื่อนซ้ายขวาเด็ดขาด */
 }
-
-*{ box-sizing:border-box; }
-html,body{ height:100%; }
-body{
-  margin:0;
-  color:var(--text);
-  font-family: "Sarabun", system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans Thai", sans-serif;
-  background:
-    radial-gradient(900px 520px at 20% 0%, rgba(255,59,106,0.35), transparent 60%),
-    radial-gradient(900px 520px at 80% 10%, rgba(255,179,193,0.18), transparent 60%),
-    linear-gradient(135deg, var(--bg2), var(--bg1) 55%, var(--bg3));
-  overflow-x:hidden;
+html {
+    scroll-behavior: smooth;
 }
 
-a{ color:inherit; text-decoration:none; }
-
-.container{
-  width:min(1100px, 92vw);
-  margin:0 auto;
-  padding: 22px 0;
+.top-banner {
+    position: relative;
+    background: linear-gradient(to right, #a51d1d, #9a1515); 
+    color: white;
+    padding: 15px;
+    text-align: left;
+    overflow: visible;
+    overflow-x: hidden;
+}
+.top-banner h2, 
+.top-banner p {
+    position: relative;  
+    z-index: 2;          
+}
+ 
+.top-banner h2 {
+    margin: 2px; /* เอาพื้นที่ว่างรอบๆ ออกให้หมด */
+    padding-top: 4px; /* เพิ่มพื้นที่ด้านบนนิดหน่อยเพื่อให้ไม่ติดขอบจอเกินไป */
+    line-height: 1; /* บีบระยะห่างระหว่างบรรทัดของตัวมันเอง */
+    font-size: 2rem;
+    
 }
 
-.topbar{
-  display:flex;
-  justify-content:flex-end;
-  align-items:center;
-  gap:12px;
-  padding-top: 10px;
+.top-banner p {
+    margin: 0; /* เอาพื้นที่ว่างรอบๆ ออก */
+    margin-top: 1px; /* (Optional) ถ้ายังห่างไม่สะใจ ให้ใช้ค่าติดลบเพื่อดึงขึ้นไปอีก */
+    margin-bottom: 3px;
+    font-size: 0.9rem; /* ปรับขนาดให้เล็กลงตามดีไซน์ */
+    opacity: 0.9; /* ทำให้ดูจางลงนิดนึงเพื่อให้ h1 เด่นขึ้น */
 }
 
-.badge{
-  font-size: 13px;
-  color: var(--muted);
-  padding: 8px 12px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: rgba(0,0,0,0.15);
-  backdrop-filter: blur(10px);
+/* --- ส่วนของรูปดาว (Decoration) --- */
+/* กำหนดสไตล์เริ่มต้นให้รูปดาวทุกรูป */
+.star-decoration-1, .star-decoration-2 {
+    position: absolute; /* จับวางแบบอิสระ */
+    pointer-events: none; /* เพื่อไม่ให้ขวางเวลาคนจะคลิกข้อความข้างหลัง */
+    z-index: 1; 
 }
 
-.lang-toggle{
-  display:flex;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  overflow:hidden;
-  background: rgba(0,0,0,0.18);
-  backdrop-filter: blur(10px);
-}
-.lang-toggle button{
-  border:0;
-  padding: 8px 12px;
-  color: var(--muted);
-  background: transparent;
-  cursor:pointer;
-  font-weight: 600;
-}
-.lang-toggle button.active{
-  color: var(--text);
-  background: rgba(255,255,255,0.10);
+/* --- จัดตำแหน่งดาวดวงที่ 1 (ดวงบนสุด) --- */
+.star-decoration-1 {
+    width: 80px;   /* ปรับขนาดตามต้องการ */
+    top: 10px;     /* เลื่อนขึ้นไปด้านบน (ล้นขอบสีแดง) */
+    right: 17px;   /* เลื่อนไปทางขวา */
+    transform: rotate(15deg); /* หมุนรูปดาวเล็กน้อยเพื่อความติส */
+    animation: frame-by-frame-wobble 0.6s steps(1) infinite alternate;
 }
 
-.header{
-  display:flex;
-  align-items:flex-end;
-  justify-content:space-between;
-  gap:16px;
-  flex-wrap:wrap;
-  padding: 10px 0 6px;
+/* --- จัดตำแหน่งดาวดวงที่ 2 (ดวงล่างลงมา) --- */
+.star-decoration-2 {
+    width: 110px;
+    top: 40px;
+    right: -40px;
+    position: absolute;
+    /* 0.6s คือความเร็ว (ยิ่งเร็วยิ่งสลับไว), steps(1) คือหัวใจสำคัญ, infinite alternate คือวนลูป */
+    animation: frame-by-frame-wobble 0.6s steps(1) infinite alternate;
 }
-.header h1{
-  margin:0;
-  font-family: "Kanit", system-ui, sans-serif;
-  letter-spacing: 0.2px;
-  font-size: 30px;
-}
-.header .subtitle{
-  margin: 6px 0 0;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.nav{
-  position: sticky;
-  top:0;
-  z-index: 50;
-  background: rgba(0,0,0,0.22);
-  backdrop-filter: blur(14px);
-  border-top: 1px solid rgba(255,255,255,0.10);
-  border-bottom: 1px solid rgba(255,255,255,0.10);
-}
-.nav .container{
-  padding: 10px 0;
-}
-.navlinks{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-}
-.navlinks a{
-  padding: 10px 12px;
-  border-radius: 14px;
-  border: 1px solid transparent;
-  color: var(--muted);
-  font-weight: 650;
-}
-.navlinks a:hover{
-  border-color: rgba(255,255,255,0.12);
-  color: var(--text);
-}
-.navlinks a.active{
-  border-color: rgba(255,59,106,0.35);
-  background: rgba(255,59,106,0.10);
-  color: var(--text);
+@keyframes frame-by-frame-wobble {
+    /* เฟรมที่ 1: บิดไปทางซ้ายนิดนึง */
+    0% {
+        transform: rotate(-12deg) scale(0.98); /* บิดซ้าย + ย่อนิดเดียว */
+    }
+    /* เฟรมที่ 2: บิดไปทางขวานิดนึง (ที่ 50% เพื่อให้สลับกันพอดี) */
+    50% {
+        transform: rotate(-8deg) scale(1);   /* บิดขวา + ขนาดปกติ */
+    }
+    /* เฟรมที่ 3: กลับมาเฟรม 1 เพื่อวนลูป */
+    100% {
+        transform: rotate(-12deg) sca
+        le(0.98); 
+    }
 }
 
-.glass{
-  background: linear-gradient(180deg, var(--glass), var(--glass2));
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: 0 16px 50px rgba(0,0,0,0.35);
-  backdrop-filter: blur(16px);
+.pixel-font {
+     font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:lighter;
+  font-style: normal;
+  text-shadow: 3px 3px 0px #000
 }
 
-.section{
-  margin-top: 18px;
+.container {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important; /* ปลดล็อกขนาดที่ถูกบีบไว้ */
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: left !important;
 }
 
-.grid-2{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+/* ตั๋วโปรไฟล์สีแดง */
+.ticket-wrapper {
+   width: 100%;
+    position: relative;
+    /* ในมือถือ ให้ชิดซ้ายปกติ ไม่ต้องใช้ค่าติดลบ */
+    margin-left: 0; 
+    margin-right: 0;
+     margin-top: 10px;
+    margin-bottom: 40px; 
+    left: 0;
+    text-align: left;
 }
-@media (max-width: 860px){
-  .grid-2{ grid-template-columns: 1fr; }
-}
-
-.profile-wrap{
-  padding: 16px;
-}
-
-.profile-title{
-  margin:0 0 8px;
-  font-family:"Kanit", system-ui, sans-serif;
-  font-size: 34px;
-  font-weight:700;
-  letter-spacing:1px;
-}
-.profile-text{
-  margin: 0;
-  color: var(--muted);
-}
-.profile-name{
-  margin: 10px 0 0;
-  font-weight: 800;
-  font-size: 18px;
-  color: var(--text);
-}
-.profile-meta{
-  margin: 6px 0 0;
-  color: var(--muted);
+@media (min-width: 1024px) {
+    .ticket-wrapper {
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-top: 10px;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        /* ถ้าอยากให้ตั๋วในคอมชิดซ้ายสุดขอบจอจริงๆ */
+        padding-left: 20px; 
+         
+    }
 }
 
-.contact{
-  margin-top: 12px;
-  display:flex;
-  flex-direction:column;
-  gap: 8px;
-  color: var(--muted);
-  font-size: 14px;
+.ticket-bg {
+     width: 100%;
+    max-width: 800px;
+    margin: 0;         /* ห้ามใส่ auto เด็ดขาด ถ้าอยากชิดซ้าย */
+    
+    background-image: url('assets/images/element/ticket_bg.png');
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    background-position: left center; /* ให้รูปเกาะขอบซ้ายของกล่อง */
+    
+    aspect-ratio: 16 / 9; 
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+    /* แก้ Padding จาก 50% เป็นเลขน้อยๆ เพื่อไม่ให้รูปโดนบีบจนเพี้ยน */
+    padding: 5%; 
+    box-sizing: border-box;
+    position: relative;
+    
 }
-.contact a{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  padding: 8px 10px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.10);
-  background: rgba(0,0,0,0.10);
+.paper-clip {
+    position: absolute;
+    top: -20px;      /* ให้หัวคลิปโผล่พ้นขอบตั๋วนิดนึง */
+    right: 1%;      
+    width: 60px;    
+    height: auto;
+    transform: rotate(-1deg);
+    z-index: 10;     
+    filter: 
+         
+        drop-shadow(1px 1px 0px rgba(0,0,0,0.2)) 
+        drop-shadow(3px 5px 4px rgba(0,0,0,0.3));
+    animation: frame-by-frame-wobble 0.6s steps(1) infinite alternate;
+     
 }
-.contact a:hover{
-  border-color: rgba(255,255,255,0.18);
-  color: var(--text);
-}
-.contact i{ color: var(--accent2); width: 18px; text-align:center; }
-
-.quote{
-  margin-top: 14px;
-  padding: 14px 16px;
-  border-radius: 16px;
-  border: 1px dashed rgba(255,255,255,0.18);
-  color: var(--muted);
-  font-size: 14px;
-}
-.quote .en{
-  margin-top: 8px;
-  color: rgba(245,245,247,0.60);
-  font-style: italic;
-}
-
-.carousel{
-  position: relative;
-  border-radius: 18px;
-  overflow:hidden;
-  border: 1px solid rgba(255,255,255,0.14);
-  background: rgba(0,0,0,0.15);
-}
-.carousel img{
-  width: 100%;
-  height: 360px;
-  object-fit: cover;
-  display:block;
-  transform: scale(1.02);
-  transition: transform 450ms ease;
-}
-@media (max-width: 860px){
-  .carousel img{ height: 280px; }
-}
-.carousel:hover img{
-  transform: scale(1.05);
-}
-.car-btn{
-  position:absolute;
-  top:50%;
-  transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(0,0,0,0.35);
-  color: var(--text);
-  cursor:pointer;
-  display:grid;
-  place-items:center;
-  transition: transform 150ms ease, background 150ms ease;
-}
-.car-btn:hover{
-  background: rgba(0,0,0,0.48);
-  transform: translateY(-50%) scale(1.05);
-}
-.car-btn.left{ left: 10px; }
-.car-btn.right{ right: 10px; }
-
-.dots{
-  position:absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display:flex;
-  gap:8px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  background: rgba(0,0,0,0.30);
-  border: 1px solid rgba(255,255,255,0.12);
-}
-.dot{
-  width: 8px; height: 8px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.30);
-}
-.dot.active{
-  background: var(--accent2);
+@media (min-width: 1024px) {
+.paper-clip {
+    position: absolute;
+    top: -30px;      /* ให้หัวคลิปโผล่พ้นขอบตั๋วนิดนึง */
+    right: 1%;      
+    width: 100px;    
+    height: auto;
+    transform: rotate(-1deg);
+    z-index: 10;     
+    filter: 
+         
+        drop-shadow(1px 1px 0px rgba(0,0,0,0.2)) 
+        drop-shadow(3px 5px 4px rgba(0,0,0,0.3));
+    animation: frame-by-frame-wobble 0.6s steps(1) infinite alternate;
+     
+}  
 }
 
-.cards4{
-  display:grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-  margin-top: 14px;
+.paper-clip-forcard {
+    position: absolute;
+    top: -20px;      /* ให้หัวคลิปโผล่พ้นขอบตั๋วนิดนึง */
+    right: -3%;      
+    width: 60px;    
+    height: auto;
+    transform: rotate(-1deg);
+    z-index: 10;     
+    filter: 
+         
+        drop-shadow(1px 1px 0px rgba(0,0,0,0.2)) 
+        drop-shadow(3px 5px 4px rgba(0,0,0,0.3));
+    animation: frame-by-frame-wobble 0.6s steps(1) infinite alternate;
+     
 }
-@media (max-width: 980px){
-  .cards4{ grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 520px){
-  .cards4{ grid-template-columns: 1fr; }
-}
-
-.cardlink{
-  padding: 16px;
-  border-radius: var(--radius);
-  border: 1px solid rgba(255,255,255,0.16);
-  background: rgba(255,255,255,0.10);
-  backdrop-filter: blur(14px);
-  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
-  display:flex;
-  gap: 12px;
-  align-items:flex-start;
-}
-.cardlink:hover{
-  transform: translateY(-4px);
-  border-color: rgba(255,179,193,0.35);
-  background: rgba(255,255,255,0.13);
-}
-.cardlink .icon{
-  width: 36px; height: 36px;
-  border-radius: 14px;
-  display:grid;
-  place-items:center;
-  background: rgba(0,0,0,0.20);
-  border: 1px solid rgba(255,255,255,0.12);
-  color: var(--accent2);
-  flex: 0 0 auto;
-}
-.cardlink h3{
-  margin:0;
-  font-family:"Kanit", system-ui, sans-serif;
-  font-size: 18px;
-}
-.cardlink p{
-  margin: 6px 0 0;
-  color: var(--muted);
-  font-size: 14px;
+@media (min-width: 1024px) {
+.paper-clip-forcard {
+    position: absolute;
+    top: -30px;      /* ให้หัวคลิปโผล่พ้นขอบตั๋วนิดนึง */
+    right: -5%;      
+    width: 70px;    
+    height: auto;
+    transform: rotate(-1deg);
+    z-index: 10;     
+    filter: 
+         
+        drop-shadow(1px 1px 0px rgba(0,0,0,0.2)) 
+        drop-shadow(3px 5px 4px rgba(0,0,0,0.3));
+    animation: frame-by-frame-wobble 0.6s steps(1) infinite alternate;
+     
+}  
 }
 
-.page-title{
-  padding: 16px;
+/* จัดฝั่งซ้าย (Text) */
+.ticket-info {
+   /* เพิ่มเลข % ตรงนี้จนกว่า Text จะลงมาอยู่ในช่องขาวพอดี */
+    
+    
+    
+    /* มั่นใจว่าไม่ได้ใส่ margin-top ที่เป็นค่าติดลบไว้ในนี้ */
+    margin-top: 20px; 
+    margin-right: 40px; 
+    margin-bottom: 0px;
+    transform: translateY(10px);
+    transform: translateX(30px);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; /* สำคัญ: เพื่อไม่ให้การเพิ่ม padding ไปดันขนาดตั๋ว */
 }
-.page-title h2{
-  margin:0;
-  font-family:"Kanit", system-ui, sans-serif;
-  font-size: 22px;
+@media (min-width: 1024px) { 
+.ticket-info {
+   /* เพิ่มเลข % ตรงนี้จนกว่า Text จะลงมาอยู่ในช่องขาวพอดี */
+     
+    
+    /* มั่นใจว่าไม่ได้ใส่ margin-top ที่เป็นค่าติดลบไว้ในนี้ */
+    margin-top: 10px; 
+    margin-right: 40px; 
+    margin-left: -10px;
+    margin-bottom: -50px;
+    transform: translateY(40px);
+    transform: translateX(30px);
+    display: flex;
+    align-items: flex-start; /* บังคับให้ลูกทุกตัว (p, h2, a) ชิดซ้ายของกล่อง */
+    text-align: left;        /* บังคับตัวหนังสือให้เริ่มจากซ้าย */
+    flex-direction: column;
+    box-sizing: border-box; /* สำคัญ: เพื่อไม่ให้การเพิ่ม padding ไปดันขนาดตั๋ว */
 }
-.page-title p{
-  margin: 6px 0 0;
-  color: var(--muted);
-}
-
-.accordion{
-  display:flex;
-  flex-direction:column;
-  gap: 12px;
-}
-.acc-item{
-  overflow:hidden;
-}
-.acc-btn{
-  width:100%;
-  text-align:left;
-  padding: 14px 16px;
-  border:0;
-  cursor:pointer;
-  color: var(--text);
-  background: transparent;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap: 10px;
-  font-weight: 750;
-}
-.acc-btn span{
-  display:flex;
-  align-items:center;
-  gap: 10px;
-  font-family:"Kanit", system-ui, sans-serif;
-}
-.acc-btn i{ color: var(--accent2); }
-.acc-panel{
-  display:none;
-  padding: 0 16px 16px;
-  color: var(--muted);
-}
-.acc-panel.show{ display:block; }
-
-.awards{
-  margin-top: 10px;
-  padding-left: 18px;
-}
-.awards li{
-  margin: 6px 0;
-}
-.check{
-  color: var(--ok);
-  margin-left: 8px;
 }
 
-.gallery{
-  display:grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  margin-top: 12px;
+.ticket-info p {
+    margin: 0;           /* ล้าง Margin บนล่างทิ้งให้หมด */
+    padding: 2px 0;      /* ใช้ Padding น้อยๆ แทนเพื่อคุมระยะห่าง */
+    line-height: 1.2;    /* บีบระยะบรรทัดให้แคบลง */
+    width: 100%;         /* บังคับกว้างเท่าที่แม่แบ่งให้ */
+    word-break: break-all; /* ถ้าคำยาวเกิน (เช่น URL) ให้ตัดขึ้นบรรทัดใหม่ทันที */
+    font-size: 60%;
 }
-@media (max-width: 860px){
-  .gallery{ grid-template-columns: repeat(3, 1fr); }
-}
-@media (max-width: 520px){
-  .gallery{ grid-template-columns: repeat(2, 1fr); }
-}
-.gallery img{
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.14);
-  cursor: zoom-in;
-  transition: transform 180ms ease;
-}
-.gallery img:hover{ transform: scale(1.02); }
+@media (min-width: 1024px) {
+.ticket-info p {
+    margin: 0;           /* ล้าง Margin บนล่างทิ้งให้หมด */
+    padding: 2px 0;      /* ใช้ Padding น้อยๆ แทนเพื่อคุมระยะห่าง */
+    line-height: 1.2;    /* บีบระยะบรรทัดให้แคบลง */
+    width: 100%;         /* บังคับกว้างเท่าที่แม่แบ่งให้ */
+    word-break: break-all; /* ถ้าคำยาวเกิน (เช่น URL) ให้ตัดขึ้นบรรทัดใหม่ทันที */
+    font-size: 111%; }
 
-.lightbox{
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.78);
-  display:none;
-  place-items:center;
-  padding: 18px;
-  z-index: 1000;
 }
-.lightbox.show{ display:grid; }
-.lightbox img{
-  width: min(960px, 94vw);
-  height: auto;
-  max-height: 86vh;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.18);
+.ticket-info h6 {
+    margin: 0; font-size: 60%;
 }
-.lightbox .close{
-  position:absolute;
-  top: 14px;
-  right: 14px;
-  width: 44px; height: 44px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.18);
-  background: rgba(0,0,0,0.35);
-  color: var(--text);
-  cursor:pointer;
+@media (min-width: 1024px) {
+.ticket-info h6 {
+    margin: 0; font-size: 150%;
+}
 }
 
-.footer{
-  margin: 26px 0 40px;
-  text-align:center;
-  color: rgba(245,245,247,0.55);
-  font-size: 13px;
+/* คุมฟอนต์และระยะห่างของหัวข้อปุ่ม */
+.label {
+    font-size: 0.65rem;
+    margin: 8px 0 4px 0;
+    color: #333;
 }
 
-.camp-links{
-  margin-top:12px;
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
+/* สไตล์ปุ่มหลัก (IG และ Line) */
+.btn-ig {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 3px 1.5px;
+   
+    border-radius: 5px;
+    background: #bc1818;
+    color: #fdffec;
+    text-decoration: none;
+    font-size: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+@media (min-width: 1024px) {
+ .btn-ig {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+   
+    border-radius: 5px;
+    background: #bc1818;
+    color: #fdffec;
+    text-decoration: none;
+    font-size: 100%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+}
+
+.btn-ig:hover, .btn-line:hover, .btn-email:hover {
+   /* ขยายขนาดเป็น 1.1 เท่า (หรือ 1.05 ถ้าอยากให้ขยายนิดเดียว) */
+    transform: scale(1.1); 
+    
+    /* (แถม) ถ้าอยากให้ปุ่มดูสว่างขึ้นนิดนึงเวลา hover */
+    filter: brightness(1.1);
+}
+
+/* แถวสำหรับ Line และ Email */
+.work-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.or-text {
+    font-size: 0.7rem;
+    color: #333;
+}
+@media (min-width: 1024px) {
+    .or-text {
+        font-size: 1.4rem;
+    }
+}
+
+/* ปุ่ม Email ทรงวงกลม */
+.btn-email, .btn-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+     background: #bc1818;
+    color: #fdffec;
+    border-radius: 50%;
+    text-decoration: none;
+    border: none;
+}
+@media (min-width: 1024px) {
+    .btn-email, .btn-line{
+    width: 50px;
+    height: 50px;
+    }
+  
+}
+
+/* ขนาดไอคอนข้างในปุ่ม */
+.btn-ig img, .btn-line img, .btn-email img {
+    height: 14px;
+    width: auto;
+}
+@media (min-width: 1024px) {
+.btn-ig img, .btn-line img, .btn-email img {
+    height: 30px;
+    width: auto;
+}}
+
+
+.bio-text {
+     
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+     
+}
+
+/* จัดฝั่งขวา (Video) */
+.ticket-media {
+    /* เพิ่มเลข % ตรงนี้จนกว่า Text จะลงมาอยู่ในช่องขาวพอดี */
+    padding-top: 0; 
+    padding-left: 0;
+    
+    /* มั่นใจว่าไม่ได้ใส่ margin-top ที่เป็นค่าติดลบไว้ในนี้ */
+    margin-top: 0px; 
+    margin-right: 55px; 
+    margin-left: -20px;
+    margin-bottom: 10px;
+    transform: translateY(0px);
+    transform: translateX(30px);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; /* สำคัญ: เพื่อไม่ให้การเพิ่ม padding ไปดันขนาดตั๋ว */
+}
+@media (min-width: 1024px) {
+    .ticket-media {
+          /* เพิ่มเลข % ตรงนี้จนกว่า Text จะลงมาอยู่ในช่องขาวพอดี */
+    padding-top: 0; 
+    padding-left: 0;
+   
+    /* มั่นใจว่าไม่ได้ใส่ margin-top ที่เป็นค่าติดลบไว้ในนี้ */
+    margin-top: -45px; 
+    margin-right: 40px; 
+    margin-left: -15px;
+    margin-bottom: -5px;
+    transform: translateY(0px);
+    transform: translateX(30px);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; /* สำคัญ: เพื่อไม่ให้การเพิ่ม padding ไปดันขนาดตั๋ว */
+    }
+}
+
+.video-container {
+    width: 90%;
+    border: 5px solid white; /* กรอบขาวรอบวิดีโอ */
+    transform: rotate(2deg); /* เอียงนิดๆ ตามดีไซน์ */
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.video-container video {
+    width: 100%;
+    display: block;
+}
+
+
+
+/* คลิปหนีบกระดาษแปะทับ */
+.clip-overlay {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 50px;
+    z-index: 10;
+}
+
+/* ส่วนเนื้อหาหลัก */
+.main-content {
+     
+    display: flex;
+    flex-direction: row; /* แบ่งซ้าย(ไอคอน) ขวา(เนื้อหา) */
+    gap: 20px;
+    justify-content: flex-start; /* บังคับให้เนื้อหาเริ่มจากซ้าย */
+    margin-left: 14px ;
+    margin-right: 10px;
+     
+    width: 100%;                 /* มั่นใจว่ากล่องกว้างเต็มพื้นที่ */
+}
+@media (min-width: 1024px) {
+    .main-content {
+        margin-left: 50px ;
+         
+    }
+    
+}
+
+
+.sidebar-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    width: 30%; /* ปรับความกว้างเมนูไอคอน */
+}
+.img-btn img {
+    width: 120px; /* กำหนดขนาดตามต้องการ */
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0;
+    animation: frame-by-frame-wobble 0.6s steps(1) infinite alternate;
+     filter: 
+         
+        drop-shadow(1px 1px 0px rgba(0,0,0,0.2)) 
+        drop-shadow(3px 5px 4px rgba(0,0,0,0.3));
+}
+@media (min-width: 1024px) {
+    .img-btn img{
+        width: 200px;
+    }
+}
+
+.img-btn img:hover {
+    opacity: 0.8; /* ให้รูปจางลงนิดนึงเวลาเอาเมาส์ชี้ */
+    transform: scale(1.05); /* ขยายขึ้นเล็กน้อย */
+     filter: brightness(1.1);
+}
+ 
+.content-display {
+    /* ปรับความกว้างให้เท่ากับ .display-box */
+    width: 80%; 
+    max-width: 400px; /* ต้องเท่ากับกล่องขาว */
+    box-sizing: border-box;
+    overflow-x: hidden;
+    position: relative;
+}
+@media (min-width: 1024px) {
+   
+    .content-display {
+        margin-left: -200px; /* ดันกล่องขวาให้ล้ำมาทางซ้าย 20px */
+        width: 90%;
+        max-width: 600px;
+        
+    }
+}
+
+ 
+.display-box {
+    background: #fdfdfda2;
+    position: relative;
+    border: 2px solid #bc1818;
+    
+    /* 1. ห้ามใส่ padding ตรงนี้ เพราะจะทำให้ h2 ไม่ชิดขอบ */
+    padding: 0; 
+    
+    width: 80%;
+    max-width: 400px;
+    min-height: 250px;
+    
+    /* 2. สั่งให้ลูกที่เกินขอบถูกตัดทิ้ง (ทำให้มุมสีแดงไม่แลบ) */
+    overflow: hidden; 
+    box-sizing: border-box;
+}
+@media (min-width: 1024px) {
+    .display-box {
+        width: 90%;       /* ขยายให้กว้างขึ้นจากเดิมที่ตั้งไว้ 70-80% */
+        max-width: 600px; /* เพิ่มเพดานความกว้าง (จากเดิม 400px) */
+        min-height: 350px; /* เพิ่มความสูงขั้นต่ำให้สมดุลกับความกว้าง */
+    }
+}
+
+.display-title {
+    margin: 0;
+    padding: 8px 15px; /* ใส่ padding ให้หัวข้อตรงนี้แทน */
+    background-color: #9a1515;
+    color: white;
+    font-size: 1.5rem;
+    font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:lighter;
+  font-style: normal;
+  text-shadow: 3px 3px 0px #000;
+    line-height: 1;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    -webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.66);
+}
+
+.display-content {
+    /* 3. ย้าย padding มาใส่ที่เนื้อหาแทน เพื่อให้ข้อความไม่ชิดขอบกล่องขาว */
+    padding: 15px;
+    color: #333;
+    font-family: monospace;
+}
+
+.cursor {
+    position: absolute;
+    top: 10px;      /* ให้หัวคลิปโผล่พ้นขอบตั๋วนิดนึง */
+    right: 15px;      
+    width: 60px;    
+    height: auto;
+    transform: rotate(-1deg);
+    z-index: 10;     
+    filter: 
+         
+        drop-shadow(1px 1px 0px rgba(0,0,0,0.2)) 
+        drop-shadow(3px 5px 4px rgba(0,0,0,0.3));
+    animation: frame-by-frame-wobble 0.6s steps(1) infinite alternate;
+}
+ 
+
+.scrolling-ticker {
+    width: 100%;
+    overflow: hidden; /* ซ่อนข้อความที่เกินขอบจอ */
+    /* ไล่สีจากดำไปน้ำตาลเข้ม */
+    background: linear-gradient(to right, #000000, #3c0303); 
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    white-space: nowrap; /* ป้องกันข้อความขึ้นบรรทัดใหม่ */
+}
+
+.ticker-content {
+    display: inline-block;
+    padding-left: 100%; /* เริ่มต้นจากขวาสุด */
+    animation: ticker-animation 40s linear infinite;
+}
+
+.ticker-content span {
+    color: rgba(255, 255, 255, 0.553);
+    font-size: 0.8rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: lowercase;
+    padding-right: 50px; /* ระยะห่างระหว่างประโยค */
+    font-weight: 300;
+}
+
+/* ตั้งค่าการเคลื่อนไหว */
+@keyframes ticker-animation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.list-item {
+    /* 1. จัดวางเนื้อหาข้างใน */
+    display: inline-flex;    /* ให้ขนาดปุ่มพอดีกับเนื้อหา */
+    align-items: center;     /* จัดไอคอนกับตัวหนังสือให้ตรงกันกลางบรรทัด */
+    gap: 10px;               /* ระยะห่างระหว่างไอคอนกับตัวหนังสือ */
+    
+    /* 2. กรอบและพื้นหลัง */
+    background-color: #ffffffb1; /* สีพื้นหลังปุ่ม */
+    border: 1.5px solid #bc1818; /* เส้นขอบสีเดียวกับธีมหลัก */
+    border-radius: 50px;      /* ทำขอบมนแบบวงรี (Pill Shape) */
+    
+    /* 3. ระยะห่างและการตกแต่ง */
+    padding: 6px 16px;       /* พื้นที่ว่างข้างในปุ่ม (บน-ล่าง, ซ้าย-ขวา) */
+    margin-bottom: 10px;     /* ระยะห่างระหว่างแต่ละปุ่ม (ใช้แทน <br>) */
+    text-decoration: none;   /* เอาขีดฆ่าใต้ตัวหนังสือออก */
+    color: #333;             /* สีตัวอักษร */
+    font-size: 0.9rem;
+    
+    /* 4. ลูกเล่นเวลาชี้ */
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+/* เอฟเฟกต์ตอนเอาเมาส์ไปชี้ */
+.list-item:hover {
+    background-color: #bc1818; /* เปลี่ยนพื้นหลังเป็นสีแดง */
+    color: #ffffff;            /* เปลี่ยนตัวหนังสือเป็นสีขาว */
+    transform: translateY(-2px); /* ลอยขึ้นนิดนึง */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.back-btn {
+     
+    top: 20px;
+    left: 20px;
+    margin-top: 100px;
+    margin-left: 20px;
+    background-color: #bc1818; /* สีแดงเดียวกับธีมตั๋ว */
+    color: white;
+    text-decoration: none;
+    padding-top: 60px;
+    padding-bottom: 10px;
+      ;
+    padding: 8px 15px;
+    border: 2px solid #000;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+    box-shadow: 4px 4px 0px #000; /* เงาแบบ Pixel */
+}
+
+.back-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #000;
+    background-color: #9a1515; /* สีเข้มขึ้นตอนชี้ */
+}
+
+.back-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px #000;
+}
+
+/* คอนเทนเนอร์หลัก */
+.category-container {
+    padding: 0px;
+    overflow-x: hidden
+}
+
+/* แถบหัวข้อหมวดหมู่ */
+.category-header {
+    width: 100%;
+    background-color: #690000; /* สีแดงเข้มธีมเดิมของคุณ */
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    border-radius: 0px;
+}
+
+.category-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.category-title {
+    font-family: 'Kanit', sans-serif;
+    color: white;
+    font-weight: 400; /* ความหนาปกติ */
+    font-size: 1.2rem;
+    margin: 5px;
+}
+
+/* ระบบ Grid: มือถือ 1 คอลัมน์ / PC 3 คอลัมน์ */
+.achievement-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* มือถือ */
+    gap: 20px;
+}
+
+@media (min-width: 1024px) {
+    .achievement-grid {
+        grid-template-columns: repeat(3, 1fr); /* PC 3 กิจกรรมต่อแถว */
+    }
+}
+
+/* รูปทรงจดหมาย */
+.letter-card {
+    background-color: #f0eee9; /* สีกระดาษจดหมายเก่าๆ */
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 370px; /* ปรับตัวเลขนี้ขึ้นตามความยาวที่ต้องการ */
+}
+
+.work-title {
+    font-family: 'Pixelify Sans', sans-serif;
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+/* บอดี้ของจดหมาย (รูป + แสตมป์) */
+.letter-body {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    height: 150px; /* ล็อกความสูงส่วนบน */
+}
+@media (min-width: 1024px) {
+    .letter-body {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    height: 250px; /* ล็อกความสูงส่วนบน */
+}
+}
+
+/* ส่วน Slider รูปภาพ */
+.image-slider-box {
+    flex: 2;
+     width: 200px;
+    height: 100%;
+    background: #000;
+    position: relative;
+    overflow-x: hidden; 
+    display: flex;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* ซ่อน scrollbar */
+}
+
+.slider-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.image-slider-box::-webkit-scrollbar { display: none; }
+
+.slide {
+min-width: 100%;    /* ให้รูปกว้างเท่ากล่อง */
+    height: 100%;       /* ให้รูปสูงเท่ากล่อง */
+    
+    /* 2. ท่าไม้ตายแก้รูปยืด */
+    object-fit: cover;   /* รูปจะเต็มกรอบโดยการครอปส่วนเกิน (สัดส่วนไม่เพี้ยน) */
+    
+    /* หรือใช้ object-fit: contain; ถ้าอยากให้เห็นรูปครบทั้งใบแต่อาจมีขอบดำข้างๆ */
+    
+    scroll-snap-align: start;
+}
+
+.slider-nav {
+    display: flex;
+    justify-content:left;
+    margin-top: 10px;
+     
+}
+
+.slider-nav button {
+    background: #bc1818;
+    color: white;
+    border: 1px solid #000;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 0.7rem;
+    box-shadow: 2px 2px 0px #000;
+}
+
+.slider-nav button:active {
+    box-shadow: 0px 0px 0px #000;
+    transform: translate(2px, 2px);
+}
+
+/* ส่วนแสตมป์ */
+.stamp-area {
+    flex: 1;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.stamp-img {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.stamp-date {
+    font-size: 1rem;
+    margin-top: 5px;
+}
+@media (min-width: 1024px) {
+   .stamp-date {
+    font-size: 1.2rem;
+    margin-top: 5px;
+} 
+}
+
+/* ส่วนคำอธิบาย (Scroll ในตัว) */
+.work-description {
+    margin-top: 15px;
+   height: 170px;
+    overflow-y: auto; /* เลื่อนอ่านในนี้ */
+    font-size: 0.85rem;
+    line-height: 1.4;
+    padding-right: 5px;
+    border-top: 1px dashed #ccc;
+    padding-top: 10px;
+}
+
+/* ตกแต่ง Scrollbar ให้ดูเล็กๆ */
+.work-description::-webkit-scrollbar {
+    width: 4px;
+}
+.work-description::-webkit-scrollbar-thumb {
+    background: #9a1515;
 }
 
 .ig-bubble{
@@ -462,24 +869,24 @@ a{ color:inherit; text-decoration:none; }
   gap:8px;
   padding:8px 14px;
   border-radius:999px;
-  font-size:14px;
+  font-size:12px;
   text-decoration:none;
-  color:white;
+  color:rgb(222, 33, 33);
 
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(255,255,255,0.15);
+  background:rgba(255, 243, 152, 0.337);
+  border:1px solid rgba(170, 23, 23, 0.15);
   backdrop-filter: blur(6px);
 
   transition:all 0.2s ease;
 }
 
 .ig-bubble i{
-  color:#E1306C;
+  color:#e5b3a1;
   font-size:16px;
 }
 
 .ig-bubble:hover{
-  background:#E1306C;
+  background:#fff1cc;
   border-color:#E1306C;
   transform:translateY(-2px);
 }
@@ -490,3 +897,48 @@ a{ color:inherit; text-decoration:none; }
   margin-right:6px;
   vertical-align:middle;
 }
+
+.sticker {
+    position: absolute; /* หรือ fixed ถ้าอยากให้ลอยค้างหน้าจอ */
+    cursor: grab;
+    display: none;
+    z-index: 99;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    /* กันบราวเซอร์ลากรูปภาพ (Ghost Image) */
+    -webkit-user-drag: none;
+    filter: drop-shadow(10px 15px 20px rgba(0,0,0,0.3));
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    
+    /* กันเมาส์ไปโดนตัวอื่นเวลาลากเร็วๆ */
+    touch-action: none;
+}
+@media (min-width: 1024px) {
+    .sticker {
+        display: block; /* สั่งให้แสดงผลเฉพาะบนจอคอม */
+    }
+}
+.sticker.dragging {
+    cursor: grabbing;
+    /* ขยายใหญ่ขึ้น 1.1 เท่า และหมุนเล็กน้อยให้ดูเหมือนของที่ถูกหยิบ */
+    transform: scale(1.15) rotate(5deg);
+    /* เพิ่มเงาให้ดูหนาและฟุ้งขึ้น เหมือนของที่ลอยห่างจากพื้นผิว */
+    filter: drop-shadow(10px 15px 20px rgba(0,0,0,0.3));
+    z-index: 1000;
+}
+.sticker:active {
+    cursor: grabbing;
+}
+#postit_mb{
+     top: 800px; left: 220px; width: 100px; scale: 3;
+    display: block;
+}
+@media (min-width: 1024px){
+    #postit_mb{
+     top: 1200px; left: 450px; width: 110px; scale: 5;
+    display: block;
+}
+}
+

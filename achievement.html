@@ -1,220 +1,500 @@
-<!doctype html>
-<html lang="th">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pakkad | Achievement</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;700&family=Sarabun:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievement_page</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&family=Prompt:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="scrolling-ticker">
+    <div class="ticker-content">
+        <span>what is this earth without art just a rock</span>
+        <span>what is this earth without art just a rock</span>
+        <span>what is this earth without art just a rock</span>
+        <span>what is this earth without art just a rock</span>
+    </div>!
+</div>
 
-  <div class="container">
-    <div class="topbar">
-      <div class="badge">M.5 | Updated 2026 March</div>
+    <header class="top-banner">
+        <h2 class="pixel-font">Achievement !</h2>
+        <p><b>Ornin Bentaborirakkun ( Pakkad )</b></p>
+        <p><b>SciusTU10 student</b></p>
+        <p style="color: rgba(240, 248, 255, 0.805); font-size: 0.9rem; padding-bottom: 10px;">ในหน้านี้จะเกี่ยวกับผลงานต่าง ๆ ไม่ว่าจะด้านการเรียน โครงงานวิจัย การเข้าค่าย และรางวัลอื่น ๆ ถ้าสนใจอะไรสามารถพูดคุยได้ทุกอย่าง</p>
+        <img src="assets/images/element/black star.png" alt="Star" class="star-decoration-1">
+        <img src="assets/images/element/black star.png" alt="Star" class="star-decoration-2">  
+        <a href="index.html" class="back-btn">
+        <span>&lt; Back</span>
+    </a>
+
+    </header>
+
+    <section class="category-container">
+    <!-- 01หัวข้อหมวดหมู่ (แถบยาว) -->
+    <div class="category-header" id="science_project">
+        <img src="assets/images/icons/icon-flask.png" alt="logo" class="category-icon">
+        <h2 class="category-title">Science project / โครงงานวิจัย      <a href="index.html" class="back-btn">
+        <span>&lt; Back</span>
+    </a></h2>
+        
     </div>
-    <div class="header">
-      <div>
-        <h1>Achievement</h1>
-        <p class="subtitle">ผลงาน • รางวัล • เกียรติบัตร</p>
-      </div>
+
+    <!-- รายการจดหมาย (Grid System) -->
+    <div class="achievement-grid">
+        
+        <!-- จดหมายฉบับที่ 1 -->
+        <div class="letter-card">
+    <h3 class="work-title">Scius TU science project</h3>
+    <img src="assets/images/element/goldstar.png" class="paper-clip-forcard" alt="clip">
+    
+    <div class="letter-body">
+        <div class="image-slider-box" id="slider-1">
+            <div class="slider-wrapper">
+                <img src="assets/images/achievement/science/scius_sp.png"class="slide">
+                <img src="assets/images/achievement/science/scius_sp_team.png"class="slide">
+                
+                 
+                 
+            </div>
+        </div>
+
+        <div class="stamp-area">
+            <img src="assets/images/stamp/scius_sp.png" alt="stamp" class="stamp-img">
+            <p class="stamp-date">M.5 : 2025</p>
+        </div>
     </div>
-  </div>
 
-  <div class="nav">
-    <div class="container">
-      <div class="navlinks">
-        <a href="index.html">Home</a>
-        <a href="achievement.html">Achievement</a>
-        <a href="activity.html">Activity</a>
-        <a href="art.html">Art gallery</a>
-        <a href="hobby.html">Hobby & Interest</a>
-      </div>
-    </div>
-  </div>
-
-  <main class="container section">
-    <div class="glass page-title">
-      <h2><i class="fa-solid fa-trophy" style="color:var(--accent2)"></i> Achievement</h2>
-      <p>หน้านี้รวมผลงานต่าง ๆ และกิจกรรมที่ได้เข้าร่วมและที่ได้ทำมาในชั้นมัธยมศึกษาตอนปลาย เป็นเส้นทางต่าง ๆ ที่ผ่านมาเผื่อใครสนใจสามารถสอบถามได้เสมอเลย</p>
+    <div class="slider-nav">
+        <button type="button" onclick="moveSlider('slider-1', -1)">❮ Back</button>
+        <button type="button" onclick="moveSlider('slider-1', 1)">Next ❯</button>
     </div>
 
-    <section class="section accordion">
+    <div class="work-description">
+        <p style="margin-top:12px;">โครงงานนี้เป็นโครงงานวิจัยที่ทำในรายวิชาโครงงานของโครงการ วมว. มธ. สกร. ร่วมกับเพื่อนสองคนและอาจารย์ที่ปรึกษาสองท่าน เรื่อง  <br/> <b style="color: rgb(180, 19, 19);">ถ่านชีวภาพกะลามะพร้าวแม่เหล็กสำหรับบำบัดสีย้อมสิ่งทอ | Magnetic Coconut-Shell Biochar Immobilized with Laccase for Textile Dye Removal</b> <br/> ซึ่งเป็นงานวิจัยที่ทำมาตลอดระยะเวลาร่วม 1 ปีและได้เข้าร่วมแข่งขันรายการต่าง ๆ มา</p>
 
-      <!-- Science project -->
-      <div class="glass acc-item">
-        <button class="acc-btn" data-acc="accScience">
-          <span><i class="fa-solid fa-flask"></i> Science project / โครงงานวิจัย</span>
-          <i class="fa-solid fa-chevron-down" data-chevron style="transition:transform 180ms ease"></i>
-        </button>
-        <div class="acc-panel" id="accScience">
-          <div class="carousel" id="carScience">
-            <button class="car-btn left" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
-            <img alt="Science project photos" />
-            <button class="car-btn right" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
-            <div class="dots"></div>
-          </div>
+    </div>
+</div>
 
-          <p style="margin-top:12px;">โครงงานนี้เป็นโครงงานวิจัยที่ทำในรายวิชาโครงงานของโครงการ วมว. มธ. สกร. ร่วมกับเพื่อนสองคนและอาจารย์ที่ปรึกษาสองท่าน เรื่อง  <br/> <b>ถ่านชีวภาพกะลามะพร้าวแม่เหล็กสำหรับบำบัดสีย้อมสิ่งทอ | Magnetic Coconut-Shell Biochar Immobilized with Laccase for Textile Dye Removal</b> <br/> ซึ่งเป็นงานวิจัยที่ทำมาตลอดระยะเวลาร่วม 1 ปีและได้เข้าร่วมแข่งขันรายการต่าง ๆ มา</p>
+        <!-- เพิ่มจดหมายฉบับที่ 2-->
+        <div class="letter-card">
+    <h3 class="work-title">YSC 2026 [ Scius TU science project ] </Scius></h3>
+    <img src="assets/images/element/paperclip.png" class="paper-clip-forcard" alt="clip">
+    
+    <div class="letter-body">
+        <div class="image-slider-box" id="slider-2">
+            <div class="slider-wrapper">
+                <img src="assets/images/achievement/science/sp1.png" class="slide">
+                <img src="assets/images/achievement/science/sp2.jpg" class="slide">
+                
+                
+                 
+                 
+            </div>
+        </div>
 
-          <ul class="awards">
-            <li><h3 style="margin:12px 0 0; font-family:Kanit, sans-serif;">YSC 2026 <img src="assets/images/icons/ysc.png" class="icon"> </h3> รางวัลชนะเลิศระดับภูมิภาค สาขาวิทยาศาสตร์โลกและสิ่งแวดล้อม (ES) ภาคกลางและตะวันออก และได้เข้าร่วมการแข่งขันรอบประเทศ </li>
+        <div class="stamp-area">
+            <img src="assets/images/stamp/ysc.png" alt="stamp" class="stamp-img">
+            <p class="stamp-date">M.5 : 2025</p>
+        </div>
+    </div>
+
+    <div class="slider-nav">
+        <button type="button" onclick="moveSlider('slider-2', -1)">❮ Back</button>
+        <button type="button" onclick="moveSlider('slider-2', 1)">Next ❯</button>
+    </div>
+
+    <div class="work-description">
+
+          
+            <li><h3 style="margin:12px 0 0; font-family:Kanit, sans-serif;"><img src="assets/images/icons/ysc.png" class="icon">YSC 2026  </h3> โครงงาน <b> "ถ่านชีวภาพกะลามะพร้าวแม่เหล็กสำหรับบำบัดสีย้อมสิ่งทอ" </b>ถูกนำไปแข่งขันในรายการ The Twenty-Eighth Young Scientist Competition: YSC 2026 หรือ การประกวดโครงงานของนักวิทยาศาสตร์รุ่นเยาว์ ครั้งที่ 28 ได้รับ<b style="color: rgb(180, 19, 19);">รางวัลชนะเลิศระดับภูมิภาค สาขาวิทยาศาสตร์โลกและสิ่งแวดล้อม (ES) ภาคกลางและตะวันออก</b>  และได้เข้าร่วมการแข่งขันรอบประเทศ </li>
             <a href="https://ysc-finalround.vercel.app/projectboard/28YESC00964T" target="_blank" class="ig-bubble">
              <span>Link : page หน้าโครงงานวิจัยชิ้นนี้จากเว็บไซต์ ysc ในการแข่งขันรอบประเทศ (public view)</span>
             </a>
-            <li><h3 style="margin:12px 0 0; font-family:Kanit, sans-serif;">SCIUS FORUM <img src="assets/images/icons/scius.png" class="icon"> </h3> SOON.. </li>
-          </ul>
-        </div>
-      </div>
+           
+         
+    </div>
+</div>
 
-      <!-- Camp -->
-<div class="glass acc-item">
-  <button class="acc-btn" data-acc="accCamp">
-    <span><i class="fa-solid fa-campground"></i> กิจกรรมค่าย</span>
-    <i class="fa-solid fa-chevron-down" data-chevron style="transition:transform 180ms ease"></i>
-  </button>
-
-  <div class="acc-panel" id="accCamp">
-
-    <!-- Camp #1 LG -->
-    <div style="margin-top:10px;">
-      <div class="carousel" id="carCamp1">
-        <img alt="Camp 1 photos" />
-        <button class="car-btn right" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
-        <div class="dots"></div>
-      </div>
-
-      <h3 style="margin:12px 0 0; font-family:Kanit, sans-serif;">LARNGEAR 25th CAMP  </h3>
-      <p style="margin:6px 0 0;" class="profile-text">: 23-26 DEC 2025 (ค้างคืน)<br/><br/> <b>น้องค่ายบ้าน TUA SECRET!! </b><br/> กิจกรรมค่ายวิศวกรรมศาสตร์ที่จุฬา จัดโดยพี่ ๆ วิศวะปี 1 สนุกมาก ๆ ได้นอนค้างคืนที่คณะกับเพื่อนใหม่และได้ connection กับพี่ ๆ เยอะด้วย มีความสุขมากจริง ๆ ที่ได้คุยกับหลายคนที่มีฝันต่างกันและพี่ ๆ จากหลาย ๆ สาขา หวังว่าจะได้เจอพี่พี่อีกในรั้ววิศวะจุฬา^^</p>
+     <!-- เพิ่มจดหมายฉบับที่ 3-->
+        <div class="letter-card">
+    <h3 class="work-title">Scius forum 16th [ Scius TU science project ] </Scius></h3>
+    <img src="assets/images/element/paperclip.png" class="paper-clip-forcard" alt="clip">
     
-       <div class="camp-links">
-  
-  <a href="https://instagram.com/larngear_camp" target="_blank" class="ig-bubble">
-    <i class="fa-brands fa-instagram"></i>
-    <span>larngear_camp<img src="assets/images/icons/lgcamp.png" class="icon"></span>
+    <div class="letter-body">
+        <div class="image-slider-box" id="slider-3">
+            <div class="slider-wrapper">
+                <img src="assets/images/achievement/science/forum1.jpg" class="slide">
+                <img src="assets/images/achievement/science/forum2.jpg" class="slide">
+                <img src="assets/images/achievement/science/forum3.jpg" class="slide">
+                <img src="assets/images/achievement/science/forum4.jpg" class="slide">
+                
+                 
+                 
+            </div>
+        </div>
+
+        <div class="stamp-area">
+            <img src="assets/images/stamp/forum.png" alt="stamp" class="stamp-img">
+            <p class="stamp-date">M.5 : 2026</p>
+        </div>
+    </div>
+
+    <div class="slider-nav">
+        <button type="button" onclick="moveSlider('slider-3', -1)">❮ Back</button>
+        <button type="button" onclick="moveSlider('slider-3', 1)">Next ❯</button>
+    </div>
+
+    <div class="work-description">
+
+            <li><h3 style="margin:12px 0 0; font-family:Kanit, sans-serif;"><img src="assets/images/icons/scius.png" class="icon">Scius Forum 16th  </h3> กิจกรรมแข่งขันโครงงานวิทยาศาสตร์รวมโครงการ วมว. ทุกคู่ศูนย์ ครั้งที่ 16 โดยเจ้าภาพคือ ม.ศิลปากร โครงงาน <b> "ถ่านชีวภาพกะลามะพร้าวแม่เหล็กสำหรับบำบัดสีย้อมสิ่งทอ" </b>ได้รับ<b style="color: rgb(180, 19, 19);">รางวัลระดับเหรียญเงิน (silver medal) รูปแบบ Oral presentation </b> สาขาวิทยาศาสตร์โลกและสิ่งแวดล้อม</li>
+
+           
+         
+    </div>
+</div>
+
+    <!-- เพิ่มจดหมายฉบับที่ 4-->
+        <div class="letter-card">
+    <h3 class="work-title">Shianghai [ Scius TU science project ]  </Scius></h3>
+    <img src="assets/images/element/paperclip.png" class="paper-clip-forcard" alt="clip">
+    
+    <div class="letter-body">
+        <div class="image-slider-box" id="slider-4">
+            <div class="slider-wrapper">
+            
+                
+                 
+                 
+            </div>
+        </div>
+
+        <div class="stamp-area">
+            <!--img src="assets/images/element/stamp-png.png" alt="stamp" class="stamp-img"-->
+            <p class="stamp-date">M.6 : 2026</p>
+        </div>
+    </div>
+
+    <div class="slider-nav">
+        <button type="button" onclick="moveSlider('slider-4', -1)">❮ Back</button>
+        <button type="button" onclick="moveSlider('slider-4', 1)">Next ❯</button>
+    </div>
+
+    <div class="work-description">
+
+                      <li><h3 style="margin:12px 0 0; font-family:Kanit, sans-serif;"> Shianghai </h3>SOON</li>
+
+             
+           
+         
+    </div>
+</div>
+          
+
+        
+
+    </div>
+    <br>
+
+  <!-- 02หัวข้อหมวดหมู่ (แถบยาว) -->
+    <div class="category-header" id="camp">
+        <img src="assets/images/icons/icon-fire.png" alt="logo" class="category-icon">
+        <h2 class="category-title">Camp / กิจกรรมค่าย      <a href="index.html" class="back-btn">
+        <span>&lt; Back</span>
+    </a></h2>
+        
+    </div>
+
+    <!-- รายการจดหมาย (Grid System) -->
+    <div class="achievement-grid">
+        
+        <!-- จดหมายฉบับที่ 1 -->
+        <div class="letter-card">
+    <h3 class="work-title">LARNGEAR 25th CAMP</h3>
+    <img src="assets/images/element/paperclip.png" class="paper-clip-forcard" alt="clip">
+    
+    <div class="letter-body">
+        <div class="image-slider-box" id="slider-camp1">
+            <div class="slider-wrapper">
+                <img src="assets/images/achievement/camp/camp1.jpg" class="slide">
+                <img src="assets/images/achievement/camp/camp2.jpg" class="slide">
+                <img src="assets/images/achievement/camp/camp3.jpg" class="slide">
+                <img src="assets/images/achievement/camp/camp4.jpg" class="slide">
+                
+                 
+                 
+            </div>
+        </div>
+
+        <div class="stamp-area">
+            <img src="assets/images/stamp/LG25.png" alt="stamp" class="stamp-img">
+            <p class="stamp-date">M.5 : 2025</p>
+        </div>
+    </div>
+
+    <div class="slider-nav">
+        <button type="button" onclick="moveSlider('slider-camp1', -1)">❮ Back</button>
+        <button type="button" onclick="moveSlider('slider-camp1', 1)">Next ❯</button>
+    </div>
+
+    <div class="work-description">
+                    <li><h3 style="margin:12px 0 0; font-family:Kanit, sans-serif;">LARNGEAR 25th CAMP   </h3>
+                  <p style="margin:6px 0 0;" class="profile-text">: 23-26 DEC 2025 (ค้างคืน)<br/> <b>น้องค่ายบ้าน TUA SECRET!! </b> กิจกรรมค่ายวิศวกรรมศาสตร์ที่จุฬา จัดโดยพี่ ๆ วิศวะปี 1 สนุกมาก ๆ ได้นอนค้างคืนที่คณะกับเพื่อนใหม่และได้ connection กับพี่ ๆ เยอะด้วย มีความสุขมากจริง ๆ ไม่ผิดหวัง</p>
+                <a href="https://instagram.com/larngear_camp" target="_blank" class="ig-bubble">
+    
+    <span>larngear_camp <img src="assets/images/icons/lgcamp.png" class="icon"></span>
   </a>
 
   <a href="https://instagram.com/tuasecret.dedjud" target="_blank" class="ig-bubble">
-    <i class="fa-brands fa-instagram"></i>
+    
     <span>tuasecret.dedjud <img src="assets/images/icons/tuasecret.jpg" class="icon"> </span>
   </a>
-
     </div>
-
-    </div>
-
-    <hr style="border:none;border-top:1px solid rgba(255,255,255,0.12); margin:16px 0;">
-
-    <!-- Camp #2 CUEE -->
-    <div>
-      <div class="carousel" id="carCamp2">
-        <img alt="Camp 2 photos" />
-        <button class="car-btn right" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
-        <div class="dots"></div>
-      </div>
-
-      <h3 style="margin:12px 0 0; font-family:Kanit, sans-serif;">CUEE 3rd</h3>
-      <p style="margin:6px 0 0;" class="profile-text">: MARCH 2026 <br/><br/>ค่ายวิศวกรรมไฟฟ้าจัดโดยพี่ ๆ นิสิตวิศวกรรมไฟฟ้าจุฬา<br/>COMING SOON...</p>
-    
-      <div class="camp-links">
-  
-  <a href="https://instagram.com/cuee_camp" target="_blank" class="ig-bubble">
-    <i class="fa-brands fa-instagram"></i>
-    <span>cuee_camp<img src="assets/images/icons/cuee.jpg" class="icon"></span>
-  </a>
-
-    </div>
-    </div>
-
-    <hr style="border:none;border-top:1px solid rgba(255,255,255,0.12); margin:16px 0;">
-
-    <!-- Camp #3 nstda -->
-    <div>
-      <div class="carousel" id="carCamp3">
-        <button class="car-btn left" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
-        <img alt="Camp 3 photos" />
-        <button class="car-btn right" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
-        <div class="dots"></div>
-      </div>
-
-      <h3 style="margin:12px 0 0; font-family:Kanit, sans-serif;">ค่ายฝึกทักษะวิจัยภาคฤดูร้อน NSTDA : NECTEC</h3>
-      <p style="margin:6px 0 0;" class="profile-text">: MARCH-MAY 2026 (ค่ายระยะยาว)<br/><br/>เป็นค่ายที่ระยะยาวมาก ๆ เพื่อน ๆ หลายคนที่อยู่ในค่ายอาจจะอ่านอยู่ ตั้งใจสร้างไซต์นี้เพื่ออยากฝึกเขียนเว็บกับใ้ช้เป็นนามบัตรออนไลน์เลย looking forward to work together kub!</p>
-    </div>
-
-  </div>
 </div>
 
-         <!-- POSN -->
-        <div class="glass acc-item">
-        <button class="acc-btn" data-acc="accPosn">
-            <span><i class="fa-solid fa-award"></i> POSN / ค่าย สอวน.</span>
-            <i class="fa-solid fa-chevron-down" data-chevron style="transition:transform 180ms ease"></i>
-        </button>
-
-        <div class="acc-panel" id="accPosn">
-            <div class="carousel" id="carPosn">
-            <button class="car-btn left" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
-            <img alt="POSN photos" />
-            <button class="car-btn right" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
-            <div class="dots"></div>
+        <!-- เพิ่มจดหมายฉบับที่ 2-->
+        <div class="letter-card">
+    <h3 class="work-title">CUEE 3rd CAMP </Scius></h3>
+    <img src="assets/images/element/paperclip.png" class="paper-clip-forcard" alt="clip">
+    
+    <div class="letter-body">
+        <div class="image-slider-box" id="slider-cuee">
+            <div class="slider-wrapper">
+                <img src="assets/images/achievement/camp/cuee1.png" class="slide">
+                <img src="assets/images/achievement/camp/cuee2.png" class="slide">
+                <img src="assets/images/achievement/camp/cuee3.png" class="slide">
+                <img src="assets/images/achievement/camp/cuee4.png" class="slide">
+                <img src="assets/images/achievement/camp/cuee5.png" class="slide">
+                 
+                
+                 
+                 
             </div>
+        </div>
 
-            <h3 style="margin:12px 0 0; font-family:Kanit, sans-serif;">POSN Camp <img src="assets/images/icons/posnicon.png" class="icon"></h3>
-            <p style="margin:6px 0 0;" class="profile-text"><b>POSN MATH I : 2024 M.4 </b> @ โรงเรียนวัดเขมาภิตาราม</p>
-            <p style="margin:6px 0 0;" class="profile-text">สอวน. ครั้งแรก ถนัดคณิตอยู่แล้วแต่เป็นค่ายตั้งต้นที่ทำให้สนใจด้านวิศวะและคอมพิวเตอร์มากขึ้น</p>
-            <p style="margin:6px 0 0;" class="profile-text"><b>POSN MATH II : 2024 M.4 </b> @ KMUTT NB</p>
-            <p style="margin:6px 0 0;" class="profile-text">มาถึงค่ายสองได้ รู้สึกโดนฉีด pure math ฉีดเข้ากระแสเลือด55 คิดว่าก็ดี คณิตศาสตร์ล้ำเกิน</p>
-            <p style="margin:6px 0 0;" class="profile-text"><b>POSN COM I : 2025 M.5 </b> @ โรงเรียนสตรีอ่างทอง</p>
-            <p style="margin:6px 0 0;" class="profile-text">Enjoy มาก ๆ ในค่าย ได้ฝึกเขียนโค้ดภาษา c++ เยอะมาก ๆ ถึงแม้จะไม่ได้ไปต่อในค่ายที่สองแต่ก็เป็นจุดเริ่มต้นของเส้นทางที่ดี</p>
+        <div class="stamp-area">
+            <img src="assets/images/stamp/cuee.png" alt="stamp" class="stamp-img">
+            <p class="stamp-date">M.5 : 2026</p>
+        </div>
+    </div>
+
+    <div class="slider-nav">
+        <button type="button" onclick="moveSlider('slider-cuee', -1)">❮ Back</button>
+        <button type="button" onclick="moveSlider('slider-cuee', 1)">Next ❯</button>
+    </div>
+
+    <div class="work-description">
+
+                              <li><h3 style="margin:12px 0 0; font-family:Kanit, sans-serif;">CUEE 3rd CAMP   </h3>
+                  <p style="margin:6px 0 0;" class="profile-text">: MARCH 2026<br/>  ค่ายวิศวกรรมไฟฟ้าจัดโดยพี่ ๆ นิสิตวิศวกรรมไฟฟ้าจุฬา ซึ่งมีทั้งเรียน สันทนาการ Workshop และแข่งขันโปรเจกต์ โดยกลุ่ม ป.ปลา ของพวกเราเลือกทำโปรเจกต์ <b style="color: rgb(180, 19, 19);">"Smart office"</b> ซึ่งใช้ความรู้เกี่ยวกับ Microcontroller / บอร์ด ESP / ESP-now / อุปกรณ์อิเล็กทรอนิกส์มาสรา้งระบบพื้นที่ทำงานอัจฉริยะ โดยเน้นความสะดวกของผู้ใช้เป็นสำคัญ โดยผลงานของพวกเราคว้า<b style="color: rgb(180, 19, 19);">รางวัลชนะเลิศ พร้อมเงินทุนการศึกษา 10,000 บาท</b>มาได้ เป็นประสบการณ์ที่ดีมาก ๆ และเป็นจุดเริ่มต้นทำให้อยากเลือกยื่นภาคไฟฟ้าในรอบพอร์ตฟอลิโอ</p>
+                 <a href="https://instagram.com/cuee_camp" target="_blank" class="ig-bubble">
     
-        </div>
-        </div>
+    <span>cuee_camp <img src="assets/images/icons/cuee.jpg" class="icon"> </span>
+  </a>
+         
+    </div>
+</div>
 
-      <!-- Other -->
-      <div class="glass acc-item">
-        <button class="acc-btn" data-acc="accOther">
-          <span><i class="fa-solid fa-people-group"></i> กิจกรรมอื่น ๆ ที่เข้าร่วม</span>
-          <i class="fa-solid fa-chevron-down" data-chevron style="transition:transform 180ms ease"></i>
-        </button>
-        <div class="acc-panel" id="accOther">
-          <p>SOON..</p>
-        </div>
-      </div>
-
-    </section>
-
-    <div class="footer">© <span data-year></span> Portfolio</div>
-  </main>
-
-  <script src="script.js"></script>
-  <script>
-    setupCarousel("carScience", [
-      "assets/images/achievement/science/sp1.jpg",
-      "assets/images/achievement/science/sp2.jpg",
-      "assets/images/achievement/science/sp3.jpg",
-      "assets/images/achievement/science/sp4.jpg"
-    ]);
-
-    setupCarousel("carCamp1", [
-      "assets/images/achievement/camp/camp1.jpg",
-      "assets/images/achievement/camp/camp2.jpg",
-      "assets/images/achievement/camp/camp3.jpg",
-      "assets/images/achievement/camp/camp4.jpg",
-      "assets/images/achievement/camp/camp5.jpg"
-    ]);
+     <!-- เพิ่มจดหมายฉบับที่ 3-->
+            <div class="letter-card">
+    <h3 class="work-title">FE 19th CAMP </Scius></h3>
+    <img src="assets/images/element/paperclip.png" class="paper-clip-forcard" alt="clip">
     
-     setupCarousel("carPosn", [
-    "assets/images/achievement/posn/posn1.jpg",
-    "assets/images/achievement/posn/posn2.jpg",
-    "assets/images/achievement/posn/posn3.jpg",
-    "assets/images/achievement/posn/posn4.jpg"
-  ]);
+    <div class="letter-body">
+        <div class="image-slider-box" id="slider-fe">
+            <div class="slider-wrapper">
+               
+                 
+            </div>
+        </div>
 
-  </script>
+        <div class="stamp-area">
+            <!--img src="assets/images/stamp/cuee.png" alt="stamp" class="stamp-img"-->
+            <p class="stamp-date">M.6 : 2026</p>
+        </div>
+    </div>
+
+    <div class="slider-nav">
+        <button type="button" onclick="moveSlider('slider-fe', -1)">❮ Back</button>
+        <button type="button" onclick="moveSlider('slider-fe', 1)">Next ❯</button>
+    </div>
+
+    <div class="work-description">
+
+                              <li><h3 style="margin:12px 0 0; font-family:Kanit, sans-serif;">FE 19th CAMP   </h3>
+                  <p style="margin:6px 0 0;" class="profile-text">: MAY 2026<br/>SOON</p>
+                 <a href="https://instagram.com/fecampcu" target="_blank" class="ig-bubble">
+    
+    <span>fecampcu <img src="assets/images/icons/fe.jpg" class="icon"> </span>
+  </a>
+         
+    </div>
+</div>
+    <!-- เพิ่มจดหมายฉบับที่ 4-->
+                        <div class="letter-card">
+    <h3 class="work-title">NSTDA SREP 09 CAMP </Scius></h3>
+    <img src="assets/images/element/paperclip.png" class="paper-clip-forcard" alt="clip">
+    
+    <div class="letter-body">
+        <div class="image-slider-box" id="slider-nectec">
+            <div class="slider-wrapper">
+               <img src="assets/images/achievement/camp/nectec2.jpg" class="slide">
+               <img src="assets/images/achievement/camp/nectec1.jpg" class="slide">
+               <img src="assets/images/achievement/camp/nectec3.jpg" class="slide">
+               <img src="assets/images/achievement/camp/nectec4.jpg" class="slide">
+               <img src="assets/images/achievement/camp/nectec5.jpg" class="slide">
+               
+            </div>
+        </div>
+
+        <div class="stamp-area">
+            <img src="assets/images/stamp/nectec.png" alt="stamp" class="stamp-img">
+            <p class="stamp-date">M.5 : 2026</p>
+        </div>
+    </div>
+
+    <div class="slider-nav">
+        <button type="button" onclick="moveSlider('slider-nectec', -1)">❮ Back</button>
+        <button type="button" onclick="moveSlider('slider-nectec', 1)">Next ❯</button>
+    </div>
+
+    <div class="work-description">
+
+                              <li><h3 style="margin:12px 0 0; font-family:Kanit, sans-serif;">NSTDA SREP 09 CAMP w/NECTEC   </h3>
+                  <p style="margin:6px 0 0;" class="profile-text">: MARCH-MAY 2026<br/>ค่ายระยะยาวฝึกทักษะวิจัยภาคฤดูร้อนกับ สวทช. โดยได้ทำงานกับศูนย์ <b style="color: rgb(180, 19, 19);">NECTEC</b> ภายใต้การดูแลของนักวิจัยพี่เลี้ยง หัวข้อ "ระบบสมองกลฝังตัวและIoT" การทำรถสองล้อทรงตัวได้ด้วยตัวเองด้วยบอร์ด ESP กับ Kidbright IDE ได้ทักษะมาเยอะมาก ทั้งฮาร์ดแวร์ การประกอบบอร์ด การบัดกรี การปั้นโมเดลสำหรับ Laser cut การอ่านแบบ Drawing และซอฟแวร์ การเขียนโค้ดหลังบ้าน ควบคุม PID อีกทั้งกิจกรรมอื่น ๆ ของค่ายก็ได้ทำให้ได้อะไรหลายอย่างไม่ว่าจะความรู้ ทักษะการใช้ชีวิต และเพื่อน ๆ จากโรงเรียนในเครือวิทยาศาสตร์ด้วยกัน เป็นก้าวสำคัญ ๆ มากที่ได้ทั้ง connection และประสบการณ์ในเส้นทางวิศวกรไฟฟ้า/คอมพิวเตอร์</p>
+                
+         
+    </div>
+</div>
+   
+
+        
+
+    </div>
+     <br>
+
+      <!-- 03หัวข้อหมวดหมู่ (แถบยาว) -->
+    <div class="category-header" id="posn">
+        <img src="assets/images/icons/icon-medal.png" alt="logo" class="category-icon">
+        <h2 class="category-title">POSN / สอวน.      <a href="index.html" class="back-btn">
+        <span>&lt; Back</span>
+    </a></h2>
+        
+    </div>
+    
+    <!-- รายการจดหมาย (Grid System) -->
+    <div class="achievement-grid">
+        
+        <!-- จดหมายฉบับที่ 1 -->
+        <div class="letter-card">
+    <h3 class="work-title">POSN MATH I  : ศูนย์โรงเรียนวัดเขมาภิตาราม</h3>
+    <img src="assets/images/element/paperclip.png" class="paper-clip-forcard" alt="clip">
+    
+    <div class="letter-body">
+        <div class="image-slider-box" id="slider-Math1">
+            <div class="slider-wrapper">
+                <img src="assets/images/achievement/posn/math1_1.jpg" class="slide">
+            
+                 
+                 
+            </div>
+        </div>
+
+        <div class="stamp-area">
+            <img src="assets/images/stamp/posnmath1.png" alt="stamp" class="stamp-img">
+            <p class="stamp-date">M.4 : 2024</p>
+        </div>
+    </div>
+
+    <div class="slider-nav">
+        <button type="button" onclick="moveSlider('slider-Math1', -1)">❮ Back</button>
+        <button type="button" onclick="moveSlider('slider-Math1', 1)">Next ❯</button>
+    </div>
+
+    <div class="work-description">
+                    <li><h3 style="margin:12px 0 0; font-family:Kanit, sans-serif;">POSN MATH I  : ศูนย์โรงเรียนวัดเขมาภิตาราม   </h3>
+                  <p style="margin:6px 0 0;" class="profile-text"> เป็น สอวน. ครั้งแรกในชีวิต ตื่นเต้นมาก ๆ ที่ได้เพราะว่าซื้อหนังสือโจทย์มาอ่านเองทั้งหมดจนสอบติด พอได้เข้าค่ายจริง ๆ ก็เปิดโลกคณิตศาสตร์มาก ถึงในค่ายจะกดดันตัวเองมาก ๆ เพราะไม่มั่นใจ แต่พอสอบท้ายค่ายจนติดค่าย 2 มาได้ ก็มั่นใจในตัวเองมากขึ้นมาก ๆ รักครูนัท <br> ปล. ใช้เวลาอ่านเองประมาณ 2 เดือน ส่วนในค่ายอ่านเนื้อหาที่เรียนอย่างเดียว เน้นทักษะการเขียนพิสูจน์ทางคณิตศาสตร์ พึ่งเคยเปิดโลกคณิตด้วยการทำแต่โจทย์ proof แต่เป็น สอวน ปีแรกที่ดีมาก</p>
+                
+    </div>
+</div>
+
+        <!-- เพิ่มจดหมายฉบับที่ 2-->
+        <div class="letter-card">
+    <h3 class="work-title">POSN MATH II : KMUTT NB </Scius></h3>
+    <img src="assets/images/element/paperclip.png" class="paper-clip-forcard" alt="clip">
+    
+    <div class="letter-body">
+        <div class="image-slider-box" id="slider-Math2">
+            <div class="slider-wrapper">
+                <img src="assets/images/achievement/posn/math2_1.jpg" class="slide">
+               
+                
+                 
+                 
+            </div>
+        </div>
+
+        <div class="stamp-area">
+            <img src="assets/images/stamp/posnmath2.png" alt="stamp" class="stamp-img">
+            <p class="stamp-date">M.4 : 2025</p>
+        </div>
+    </div>
+
+    <div class="slider-nav">
+        <button type="button" onclick="moveSlider('slider-Math2', -1)">❮ Back</button>
+        <button type="button" onclick="moveSlider('slider-Math2', 1)">Next ❯</button>
+    </div>
+
+    <div class="work-description">
+                    <li><h3 style="margin:12px 0 0; font-family:Kanit, sans-serif;">POSN MATH II : KMUTT NB   </h3>
+                  <p style="margin:6px 0 0;" class="profile-text"> พอติดค่ายสองมาศูนย์จึงอัพเกรดเป็นระดับมหาลัย โดยมีอาจารย์มหาลัยเป็นคนสอน เป็นการใช้ชีวิตกินนอนกับ pure math ล้วน ๆ อยู่กับทฤษฎี แนวทางใหม่ ๆ ประสบการณ์ครั้งหนึ่งในชีวิต เป็นปิดเทอมที่วุ่นวายจนไม่เหงาเลย เป็นช่วงที่เริ่มตัดสินใจว่าทักษะเรามาทางนี้เราอยากเป็นอะไร เลยได้คำตอบว่าอยากเป็นวิศวะ</p>
+        
+     </div>
+</div>
+
+     <!-- เพิ่มจดหมายฉบับที่ 3-->
+            <div class="letter-card">
+    <h3 class="work-title">POSN COMPUTER I  : ศูนย์โรงเรียนสตรีอ่างทอง </Scius></h3>
+    <img src="assets/images/element/paperclip.png" class="paper-clip-forcard" alt="clip">
+    
+    <div class="letter-body">
+        <div class="image-slider-box" id="slider-com">
+            <div class="slider-wrapper">
+                <img src="assets/images/achievement/posn/posn1.jpg" class="slide">
+                <img src="assets/images/achievement/posn/posn2.jpg" class="slide">
+                 
+            </div>
+        </div>
+
+        <div class="stamp-area">
+            <img src="assets/images/stamp/posncom1.png" alt="stamp" class="stamp-img">
+            <p class="stamp-date">M.5 : 2025</p>
+        </div>
+    </div>
+
+    <div class="slider-nav">
+        <button type="button" onclick="moveSlider('slider-com', -1)">❮ Back</button>
+        <button type="button" onclick="moveSlider('slider-com', 1)">Next ❯</button>
+    </div>
+
+    <div class="work-description">
+                    <li><h3 style="margin:12px 0 0; font-family:Kanit, sans-serif;">POSN COMPUTER I  : ศูนย์โรงเรียนสตรีอ่างทอง  </h3>
+                  <p style="margin:6px 0 0;" class="profile-text"> เข้า สอวน. คอมพิวเตอร์เพราะเริ่มสนใจในด้าน Coding  พูดตามตรงสอบเข้าไม่ลำบากมากนักเพราะว่ามีพื้นฐานคณิตที่แน่น พอได้ลองเข้าค่ายไปเขียนโค้ดแก้โจทย์ปัญหาในภาษา c++ ก็มั่นใจว่าเราชอบการโค้ดดิ้งจริง ๆ ถึงแม้จะไม่ได้ไปต่อในค่ายที่ 2 แต่ก็ไม่เคยผิดหวังกับค่ายครั้งนี้</p>
+          
+    </div>
+</div>
+   
+
+        
+
+    </div>
+     <br><br>
+ 
+</section>
+
+    <img src="assets/images/element/Achievement_Icon.png" class="sticker"  style="top: 40px; right: 450px; width: 200px; rotate: 15deg;">
+
 </body>
 </html>

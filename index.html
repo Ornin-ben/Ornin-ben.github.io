@@ -1,156 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pakkad | About me</title>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;700&family=Sarabun:wght@400;600;800&display=swap" rel="stylesheet">
-
-  <!-- Icons (Font Awesome) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakkad's Portfolio</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="scrolling-ticker">
+    <div class="ticker-content">
+        <span>what is this earth without art just a rock</span>
+        <span>what is this earth without art just a rock</span>
+        <span>what is this earth without art just a rock</span>
+        <span>what is this earth without art just a rock</span>
+    </div>
+</div>
 
-  <div class="container">
-    <div class="topbar">
-      <div class="lang-toggle" title="Toggle language (only About section)">
-        <button id="btnTH" class="active">TH</button>
-        <button id="btnEN">EN</button>
-      </div>
-      <div class="badge">M.5 | Updated 2026 March</div>
+    <header class="top-banner">
+        <h2 class="pixel-font">P.APRIL_18 : PAKKAD</h2>
+        <p><b>Ornin Bentaborirakkun ( Pakkad )</b></p>
+        <p><b>SciusTU10 student</b></p>
+        <p style="color: rgba(240, 248, 255, 0.805); font-size: 0.9rem;">หน้าไซต์นี้สร้างขึ้นเพื่อให้เพื่อน ๆ พี่ ๆ น้อง ๆ หรือผู้ใหญ่ทุกคนได้มารู้จักกันมากขึ้น ทั้งด้านผลงานและความสนใจส่วนตัว <br/> ถ้าใครอยากมาคุยกันหรือสงสัยเกี่ยวกับงานส่วนไหนยินดีพูดคุย ทักมาได้เสมอ</p>
+        <img src="assets/images/element/black star.png" alt="Star" class="star-decoration-1">
+        <img src="assets/images/element/black star.png" alt="Star" class="star-decoration-2">  
+    </header>
+
+    
+    
+    <main class="container">
+        
+        <div class="ticket-wrapper">
+   <div class="ticket-bg"> 
+        <img src="assets/images/element/paperclip.png" class="paper-clip" alt="clip">
+
+    <div class="ticket-info">
+         <p> อรอินทุ์ เบญจบริรักษ์กุล <br/> (ผักกาด)</p>
+         <p> นักเรียน วมว. มธ. สกร. <br/> รุ่นที่ 10</p>
+         <h6 style="color: brown;"><b><u>Feel free to contact me !</u></b></h6>
+          
+         
+         <p class="label">in general</p>
+
+<a href="https://instagram.com/p.april_18" target="_blank" class="btn-ig">
+    <img src="assets/images/icons/ig.png" alt="IG"> p.april_18
+</a>
+
+<p class="label">for work</p>
+
+<div class="work-row">
+    <button onclick="copyLine()" class="btn-line">
+        <img src="assets/images/icons/Line.png" alt="Line">  
+    </button>
+    <span class="or-text">or</span>
+    <a href="mailto:p.april18p@gmail.com" class="btn-email">
+        <img src="assets/images/icons/mail.png" alt="Email">
+    </a>
+</div>
+          
+    </div> 
+    <div class="ticket-media">
+        <video autoplay muted loop playsinline class="ticket-video">
+        <source src="assets/me.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    </div> 
+
     </div>
 
-    <div class="header">
-      <div>
-        <h1>Pakkad</h1>
-        <p class="subtitle">Portfolio • About me • Contact</p>
-      </div>
+
     </div>
-  </div>
+</div>
 
-  <div class="nav">
-    <div class="container">
-      <div class="navlinks">
-        <a href="index.html">Home</a>
-        <a href="achievement.html">Achievement</a>
-        <a href="activity.html">Activity</a>
-        <a href="art.html">Art gallery</a>
-        <a href="hobby.html">Hobby & Interest</a>
-      </div>
+ 
+    
+
+        <section class="main-content">
+            <div class="sidebar-icons">
+                <a  onclick="changeTextActivity('Achievement')" class="img-btn">
+    <img src="assets/images/element/Achievement_Icon.png" alt="คลิกเพื่อไปที่ chievement">
+                </a>
+                <a  onclick="changeTextActivity('Activity')" class="img-btn">
+    <img src="assets/images/element/Activity_Icon.png" alt="คลิกเพื่อไปที่ Activity">
+                </a>
+                <a onclick="changeTextActivity('ART')" class="img-btn">
+    <img src="assets/images/element/ART_Icon.png" alt="คลิกเพื่อไปที่ Art">
+                </a>
+                <a onclick="changeTextActivity('Interest')" class="img-btn">
+    <img src="assets/images/element/Interest_Icon.png" alt="คลิกเพื่อไปที่ Interest"> 
+                </a>
+            </div>
+
+           <div class="content-display">
+    <img src="assets/images/element/cursor.png" alt="cursorelement" class="cursor">
+    
+    <div class="display-box">
+        <h2 class="display-title" id="todo-text">What to do?</h2>
+        <div class="display-content">
+            Choose something!
+        </div>
     </div>
-  </div>
+</div>
+<img src="assets/images/element/Note_dek70.png" class="sticker" id="postit_mb" >
 
-  <main class="container section">
-    <div class="grid-2">
+        </section>
 
-      <!-- LEFT: Profile carousel -->
-      <div class="glass profile-wrap">
-        <div class="carousel" id="carProfile">
-           
-          <img alt="Profile photo carousel" />
-          <button class="car-btn right" aria-label="Next">
-            <i class="fa-solid fa-chevron-right"></i>
-          </button>
-          <div class="dots"></div>
-        </div>
+    </main>
 
-        <div class="quote">
-          หน้าไซต์นี้สร้างขึ้นเพื่อให้เพื่อน ๆ พี่ ๆ น้อง ๆ หรือผู้ใหญ่ทุกคนได้มารู้จักกันมากขึ้น ทั้งด้านผลงานและความสนใจส่วนตัว
-          ถ้าใครอยากมาคุยกันหรือสงสัยเกี่ยวกับงานส่วนไหนยินดีพูดคุย ทักมาได้เสมอ
-          <div class="en">“The wind is rising, We must try to live”</div>
-        </div>
-      </div>
+<img src="assets/images/element/pk.png" class="sticker"  style="top: 40px; left: 320px; width: 80px; rotate: 15deg;">
+<img src="assets/images/element/Mypic1.png" class="sticker"  style="top: 250px; right: 400px;  rotate: 15deg; width: 300px;">
+<img src="assets/images/element/Mypic2.png" class="sticker"  style="top: 400px; right: 200px;  rotate: -15deg; width: 300px;">
+<img src="assets/images/element/postit_aboutme.png" class="sticker"  style="bottom: -400px; right: 100px;  rotate: -15deg; width: 400px;">
 
-      <!-- RIGHT: About + Contact (TH/EN toggle only here) -->
-      <div class="glass profile-wrap">
 
-        <div data-lang="th">
-          <h2 class="profile-title">About me</h2>
-          <p class="profile-name">อรอินทุ์ เบญจบริรักษ์กุล (ผักกาด)</p>
-          <p class="profile-meta">นักเรียน ม.5 วมว. มธ. สกร.<br/><br/><b>SCIUS TU 10</b></p>
-        </div>
-
-        <div data-lang="en" style="display:none">
-          <h2 class="profile-title">About me</h2>
-          <p class="profile-name">Ornin bentaborirakkun (Pakkad)</p>
-          <p class="profile-meta">M.5 student from SCIUSTU<br/><br/> <b>SCIUS TU 10</b></p>
-        </div>
-
-        <div class="contact">
-          <a href="#" onclick="navigator.clipboard.writeText('pakkad-18'); return false;">
-            <i class="fa-brands fa-line"></i>
-            <span>Line ID: pakkad-18 (click to copy)</span>
-          </a>
-
-          <a href="https://instagram.com/p.april_18" target="_blank" rel="noreferrer">
-            <i class="fa-brands fa-instagram"></i>
-            <span>IG: p.april_18</span>
-          </a>
-
-          <a href="mailto:p.april18p@gmail.com">
-            <i class="fa-solid fa-envelope"></i>
-            <span>Email: p.april18p@gmail.com</span>
-          </a>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- 4 blocks -->
-    <section class="section">
-      <div class="cards4">
-        <a class="cardlink" href="achievement.html">
-          <div class="icon"><i class="fa-solid fa-trophy"></i></div>
-          <div>
-            <h3>Achievement</h3>
-            <p>ผลงาน/รางวัล/เกียรติบัตร</p>
-          </div>
-        </a>
-
-        <a class="cardlink" href="activity.html">
-          <div class="icon"><i class="fa-solid fa-star"></i></div>
-          <div>
-            <h3>Activity</h3>
-            <p>กิจกรรมต่าง ๆ ที่เคยทำ</p>
-          </div>
-        </a>
-
-        <a class="cardlink" href="art.html">
-          <div class="icon"><i class="fa-solid fa-palette"></i></div>
-          <div>
-            <h3>Art gallery</h3>
-            <p>งานวาด/งานศิลปะ</p>
-          </div>
-        </a>
-
-        <a class="cardlink" href="hobby.html">
-          <div class="icon"><i class="fa-solid fa-heart"></i></div>
-          <div>
-            <h3>Hobby</h3>
-            <p>งานอดิเรก/สิ่งที่ชอบ</p>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <div class="footer">© <span data-year></span> Portfolio</div>
-  </main>
-
-  <script src="script.js"></script>
-  <script>
-    // Profile carousel images (5)
-    setupCarousel("carProfile", [
-      "assets/images/profiles/profile1.jpg",
-      "assets/images/profiles/profile2.jpg",
-      "assets/images/profiles/profile3.jpg",
-      "assets/images/profiles/profile4.jpg" 
-    ]);
-  </script>
 </body>
 </html>

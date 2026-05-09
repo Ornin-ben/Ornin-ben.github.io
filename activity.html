@@ -1,113 +1,188 @@
-<!doctype html>
-<html lang="th">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pakkad | Activity</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500;700&family=Sarabun:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity_page</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&family=Prompt:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <div class="container">
-    <div class="topbar">
-      <div class="badge">M.5 | Updated 2026 March</div>
-    </div>
-    <div class="header">
-      <div>
-        <h1>Activity</h1>
-        <p class="subtitle">กิจกรรมที่เคยทำ</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="nav">
-    <div class="container">
-      <div class="navlinks">
-        <a href="index.html">Home</a>
-        <a href="achievement.html">Achievement</a>
-        <a href="activity.html">Activity</a>
-        <a href="art.html">Art gallery</a>
-        <a href="hobby.html">Hobby & Interest</a>
-      </div>
-    </div>
-  </div>
-
-  <main class="container section">
-    <div class="glass page-title">
-      <h2><i class="fa-solid fa-star" style="color:var(--accent2)"></i> Activity</h2>
-      <p>เป็นเด็กกิจกรรมแบบตะโกน ประสบการณ์ในมัธยมปลายที่ผ่านมาในแต่ละงานก็ทั้งเหนื่อยและสนุกมาก ๆ แต่ยินดีกับทุกคนที่ทำงานด้วยกันทั้งอดีต ปัจจุบัน และอนาคตนะ เต็มที่! สามารถเลื่อนดูภาพเด็กกิจกรรมคนนี้ตะลอนทำโน่นทำนี่ได้เลย55</p>
-    </div>
-
-<section class="section glass profile-wrap">
-
-  <h2 style="margin:0;">Musician</h2>
-
-  <div class="gallery" style="margin-top:12px;">
-  <img data-lightbox src="assets/images/activity/musician1.jpg" alt="musician 1">
-  <img data-lightbox src="assets/images/activity/musician2.jpg" alt="musician 2">
-  <img data-lightbox src="assets/images/activity/musician3.jpg" alt="musician 3">
- 
+    <div class="scrolling-ticker">
+    <div class="ticker-content">
+        <span>what is this earth without art just a rock</span>
+        <span>what is this earth without art just a rock</span>
+        <span>what is this earth without art just a rock</span>
+        <span>what is this earth without art just a rock</span>
+    </div>!
 </div>
 
-  <p class="profile-text" style="margin-top:10px;">
-    รับบทเป็นมือคีย์บอร์ด ในหลาย ๆ งานที่โครงการจัดเช่น งานรับน้อง ปาร์ตี้ ปัจฉิมต่าง ๆ สนุกดี ชอบความรู้สึกที่อยู่บนเวที แต่วางมือแล้วดีกว่า ขอลงไปโดดมั่ง55 ในอนาคตเองมหาลัยถ้ามีโอกาสก็ยังอยากเล่นดนตรีกับวง
-  </p>
+    <header class="top-banner">
+        <h2 class="pixel-font">Activity !</h2>
+        <p><b>Ornin Bentaborirakkun ( Pakkad )</b></p>
+        <p><b>SciusTU10 student</b></p>
+        <p style="color: rgba(240, 248, 255, 0.805); font-size: 0.9rem; padding-bottom: 10px;"> ในหน้านี้จะเกี่ยวกับกิจกรรมต่าง ๆที่เคยทำมาในสมัยมัธยมปลาย ส่วนตัวเป็นเด็กกิจกรรม เลยได้ลองทำอะไรหลายอย่างมาก ๆ    </p>
+        <img src="assets/images/element/black star.png" alt="Star" class="star-decoration-1">
+        <img src="assets/images/element/black star.png" alt="Star" class="star-decoration-2">  
+        <a href="index.html" class="back-btn">
+        <span>&lt; Back</span>
+    </a>
+    </header>
 
-</section>
+    <section class="category-container">
+    <!-- 01หัวข้อหมวดหมู่ (แถบยาว) -->
+    <div class="category-header" >
+        <img src="assets/images/icons/scius.png" class="icon">
+        <h2 class="category-title">with SCIUS      <a href="index.html" class="back-btn">
+        <span>&lt; Back</span>
+    </a></h2>
+    </div>
+    <!-- รายการจดหมาย (Grid System) -->
+    <div class="achievement-grid">
+        
+        <!-- จดหมายฉบับที่ 1 -->
+        <div class="letter-card">
+    <h3 class="work-title">Musician</h3>
+    <img src="assets/images/element/paperclip.png" class="paper-clip-forcard" alt="clip">
+    
+    <div class="letter-body">
+        <div class="image-slider-box" id="slider-1">
+            <div class="slider-wrapper">
+                <img src="assets/images/activity/musician2.jpg"class="slide">
+                <img src="assets/images/activity/musician1.jpg"class="slide">
+                <img src="assets/images/activity/musician3.jpg"class="slide">
 
-<section class="section glass profile-wrap">
+                 
+            </div>
+        </div>
 
-  <h2 style="margin:0;">Orientation event</h2>
+        <div class="stamp-area">
+            <img src="assets/images/stamp/musician.png" alt="stamp" class="stamp-img">
+            <SCIUS class="stamp-date">SCIUS TU </p>
+        </div>
+    </div>
 
-  <div class="gallery" style="margin-top:12px;">
-  <img data-lightbox src="assets/images/activity/newfriend1.jpg" alt="newfriend 1">
-  <img data-lightbox src="assets/images/activity/newfriend2.jpg" alt="newfriend 2">
-  <img data-lightbox src="assets/images/activity/newfriend3.jpg" alt="newfriend 3">  
-  <img data-lightbox src="assets/images/activity/newfriend4.jpg" alt="newfriend 4">
+    <div class="slider-nav">
+        <button type="button" onclick="moveSlider('slider-1', -1)">❮ Back</button>
+        <button type="button" onclick="moveSlider('slider-1', 1)">Next ❯</button>
+    </div>
+
+    <div class="work-description">
+        <p style="margin-top:12px;"> รับบทเป็นมือคีย์บอร์ด ในหลาย ๆ งานที่โครงการจัดเช่น งานรับน้อง ปาร์ตี้ ปัจฉิมต่าง ๆ สนุกดี ชอบความรู้สึกที่อยู่บนเวที แต่วางมือแล้วดีกว่า ขอลงไปโดดมั่ง55 ในอนาคตเองมหาลัยถ้ามีโอกาสก็ยังอยากเล่นดนตรีกับวง</p>
+                <p style="margin-top:12px;"> รับน้องรุ่น 11  2025 / Once 2025 / Byenior 2025</p>
+
+    </div>
+</div>
+        <!-- จดหมายฉบับที่ 2 -->
+        <div class="letter-card">
+    <h3 class="work-title">Orientation event</h3>
+    <img src="assets/images/element/paperclip.png" class="paper-clip-forcard" alt="clip">
+    
+    <div class="letter-body">
+        <div class="image-slider-box" id="slider-2">
+            <div class="slider-wrapper">
+                
+                <img src="assets/images/activity/newfriend2.jpg"class="slide">
+                <img src="assets/images/activity/newfriend3.jpg"class="slide">
+                <img src="assets/images/activity/newfriend1.jpg"class="slide">
+                <img src="assets/images/activity/newfriend4.jpg"class="slide">
+
+                 
+            </div>
+        </div>
+
+        <div class="stamp-area">
+            <img src="assets/images/stamp/newfriend.png" alt="stamp" class="stamp-img">
+            <SCIUS class="stamp-date">SCIUS TU </p>
+        </div>
+    </div>
+
+    <div class="slider-nav">
+        <button type="button" onclick="moveSlider('slider-2', -1)">❮ Back</button>
+        <button type="button" onclick="moveSlider('slider-2', 1)">Next ❯</button>
+    </div>
+
+    <div class="work-description">
+        <p style="margin-top:12px;"> กิจกรรมรับน้องใหม่ ทำเพื่อรับน้อง ๆ ม.4 รุ่นที่ 11 ทั้ง 60 คนตอนเราเป็นเด็ก ม.5 เป็นงานที่ทำทั้งรุ่นและสเกลใหญ่มาก ๆ ตั้งแต่งานประฐมนิเทศในหอประชุม กิจกรรมสันทนาการ กิจกรรมฐาน พร็อบตกแต่งสถานที่ พิธีเทียน After party concert คอนเท้นต์ในโซเชียล บริหารงานในรุ่น เรียกว่าตำแหน่งงานเราได้แตะทุกงานไม่มากก็น้อย55 งานใหญ่ที่สุด เหนื่อยที่สุดในการจัดกิจกรรมมาเลย ภูมิใจในรุ่นสิบทุกคนที่ทำงานนี้ออกมาให้เด็กๆได้</p>
+                <p style="margin-top:12px;"> with SCIUS TU 10</p>
+
+    </div>
 </div>
 
-  <p class="profile-text" style="margin-top:10px;">
-    กิจกรรมรับน้องใหม่ ทำเพื่อรับน้อง ๆ ม.4 รุ่นที่ 11 ทั้ง 60 คนตอนเราเป็นเด็ก ม.5 เป็นงานที่ทำทั้งรุ่นและสเกลใหญ่มาก ๆ ตั้งแต่งานประฐมนิเทศในหอประชุม กิจกรรมสันทนาการ กิจกรรมฐาน พร็อบตกแต่งสถานที่ พิธีเทียน After party concert คอนเท้นต์ในโซเชียล บริหารงานในรุ่น เรียกว่าตำแหน่งงานเราได้แตะทุกงานไม่มากก็น้อย55 งานใหญ่ที่สุด เหนื่อยที่สุดในการจัดกิจกรรมมาเลย ภูมิใจในรุ่นสิบทุกคนที่ทำงานนี้ออกมาให้เด็กๆได้
-  </p>
+          
 
-</section>
+        
 
-<section class="section glass profile-wrap">
+    </div>
+    <br>
 
-  <h2 style="margin:0;">SKR academic gen3 team</h2>
+    <!-- 02หัวข้อหมวดหมู่ (แถบยาว) -->
+    <div class="category-header" id="skr" >    
+        <h2 class="category-title">with SKR      <a href="index.html" class="back-btn">
+        <span>&lt; Back</span>
+    </a></h2>
+        
+    </div>
 
-  <div class="gallery" style="margin-top:12px;">
-  <img data-lightbox src="assets/images/activity/skrao1.jpg" alt="skrao1">
-  <img data-lightbox src="assets/images/activity/skrao2.jpg" alt="skrao2">
-  <img data-lightbox src="assets/images/activity/skrao3.jpg" alt="skrao3">
-  <img data-lightbox src="assets/images/activity/skrao4.jpg" alt="skrao4">
-</div>
+    <!-- รายการจดหมาย (Grid System) -->
+    <div class="achievement-grid">
+        
+        <!-- จดหมายฉบับที่ 1 -->
+        <div class="letter-card">
+    <h3 class="work-title">SKR academic gen3 team</h3>
+    <img src="assets/images/element/paperclip.png" class="paper-clip-forcard" alt="clip">
+    
+    <div class="letter-body">
+        <div class="image-slider-box" id="slider-3">
+            <div class="slider-wrapper">
+                <img src="assets/images/activity/skrao1.jpg"class="slide">
+                <img src="assets/images/activity/skrao2.jpg"class="slide">
+                <img src="assets/images/activity/skrao3.jpg"class="slide">
+                <img src="assets/images/activity/skrao4.jpg"class="slide">
+                 
+            </div>
+        </div>
 
-  <p class="profile-text" style="margin-top:10px;">
-     SKR academic olympiad เป็นเหมือนชมรมเล็ก ๆ ที่รวมทีมงานสาขาวิชาต่าง ๆ เพื่อส่งเสริมทักษะวิชาการของนักเรียนในโรงเรียน เป็นทีมงานในสาขา Math เมื่อก่อนพวกเราจะเน้นไปที่ สอวน. อย่างเดียวแต่ปีล่าสุดได้ขยายไปเป็นด้านวิชาการทั้งหมด ได้ทำตั้งแต่กราฟฟิก จัดสอบแข่งขันภายในโรงเรียน ออกข้อสอบ พิธีกรวันแข่งเลย สนุกดี ๆ เพราะที่นี่ทำงานเป็นระบบแข็งแรงมาก ๆ
-  </p>
-  <a href="https://instagram.com/skr_academic_olympiad" target="_blank" class="ig-bubble">
-    <i class="fa-brands fa-instagram"></i>
-    <span>SKR academic olympiad</span>
+        <div class="stamp-area">
+            <img src="assets/images/stamp/sao.png" alt="stamp" class="stamp-img">
+            <SCIUS class="stamp-date">SKR </p>
+        </div>
+    </div>
+
+    <div class="slider-nav">
+        <button type="button" onclick="moveSlider('slider-3', -1)">❮ Back</button>
+        <button type="button" onclick="moveSlider('slider-3', 1)">Next ❯</button>
+    </div>
+
+    <div class="work-description">
+        <p style="margin-top:12px;"> SKR academic olympiad เป็นเหมือนชมรมเล็ก ๆ ที่รวมทีมงานสาขาวิชาต่าง ๆ เพื่อส่งเสริมทักษะวิชาการของนักเรียนในโรงเรียน เป็นทีมงานในสาขา Math เมื่อก่อนพวกเราจะเน้นไปที่ สอวน. อย่างเดียวแต่ปีล่าสุดได้ขยายไปเป็นด้านวิชาการทั้งหมด ได้ทำตั้งแต่กราฟฟิก จัดสอบแข่งขันภายในโรงเรียน ออกข้อสอบ พิธีกรวันแข่งเลย สนุกดี ๆ เพราะที่นี่ทำงานเป็นระบบแข็งแรงมาก ๆ</p>
+       
+              <a href="https://instagram.com/skr_academic_olympiad" target="_blank" class="ig-bubble">
+    
+    <span>skr_academic_olympiad <img src="assets/images/icons/sao.jpg" class="icon"> </span>
   </a>
 
+    </div>
+</div>
+
+          
+
+        
+
+    </div>
+    <br>
+
+    <!-- 03หัวข้อหมวดหมู่ (แถบยาว) -->
+    <div class="category-header" id="other_activity" >    
+        <h2 class="category-title">other_activity <i style="color: rgba(255, 255, 255, 0.581);">SOON</i>      </h2>
+
+ 
 </section>
 
-    <div class="footer">© <span data-year></span> Portfolio</div>
-  </main>
+    <img src="assets/images/element/Activity_Icon.png" class="sticker"  style="top: 40px; right: 500px; width: 170px; rotate: 15deg;">
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox">
-    <button class="close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-    <img alt="preview">
-  </div>
 
-  <script src="script.js"></script>
 </body>
 </html>
