@@ -455,8 +455,8 @@ html {
     flex-direction: row; /* แบ่งซ้าย(ไอคอน) ขวา(เนื้อหา) */
     gap: 20px;
     justify-content: flex-start; /* บังคับให้เนื้อหาเริ่มจากซ้าย */
-    margin-left: 14px ;
-    margin-right: 10px;
+    
+    overflow: hidden;
      
     width: 100%;                 /* มั่นใจว่ากล่องกว้างเต็มพื้นที่ */
 }
@@ -687,7 +687,7 @@ html {
 
 /* แถบหัวข้อหมวดหมู่ */
 .category-header {
-    width: 100%;
+    width: 100%-10px;
     background-color: #690000; /* สีแดงเข้มธีมเดิมของคุณ */
     display: flex;
     align-items: center;
@@ -932,12 +932,15 @@ min-width: 100%;    /* ให้รูปกว้างเท่ากล่อ
     cursor: grabbing;
 }
 #postit_mb{
-     top: 800px; left: 220px; width: 100px; scale: 3;
+    position: absolute;
+     bottom: 20px; left: 0px; width: 250px; 
     display: block;
+    filter: drop-shadow(10px 15px 20px rgba(0,0,0,0.3));
+
 }
 @media (min-width: 1024px){
     #postit_mb{
-     top: 1200px; left: 450px; width: 110px; scale: 5;
+     bottom: 20px; left: 0px; width: 500px; 
     display: block;
 }
 }
@@ -977,7 +980,7 @@ min-width: 100%;    /* ให้รูปกว้างเท่ากล่อ
     100% { 
         /* ถ้ามีรูปทั้งหมด 6 ใบ ให้คูณด้วย 5 (รูปสุดท้ายจะมาแปะหน้าพอดี) */
         /* อย่าลืมบวก Gap เข้าไปด้วยเพื่อให้ระยะเป๊ะ */
-        transform: translateX(calc(-100% * 5 - 20px * 5)); 
+        transform: translateX(calc(-100% * 8 - 20px * 8)); 
     }
 }
 
