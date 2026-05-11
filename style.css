@@ -974,7 +974,18 @@ min-width: 100%;    /* ให้รูปกว้างเท่ากล่อ
 /* --- Animation สำหรับมือถือ (1 รูป) --- */
 @keyframes scroll-mobile {
     0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-100% * 4 - 20px * 4)); }
+    100% { 
+        /* ถ้ามีรูปทั้งหมด 6 ใบ ให้คูณด้วย 5 (รูปสุดท้ายจะมาแปะหน้าพอดี) */
+        /* อย่าลืมบวก Gap เข้าไปด้วยเพื่อให้ระยะเป๊ะ */
+        transform: translateX(calc(-100% * 5 - 20px * 5)); 
+    }
+}
+
+.art-track {
+    display: flex;
+    gap: 20px;
+    /* ปรับความเร็วตรงนี้ */
+    animation: scroll-mobile 20s linear infinite; 
 }
 
 /* --- สำหรับหน้าจอคอม (PC) --- */
