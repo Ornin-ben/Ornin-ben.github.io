@@ -28,7 +28,12 @@ function changeTextActivity(category) {
                 <a href="Art.html#graphic" class="list-item"><img src="assets/images/icons/icon-joystick.png" width="20" height="20"> graphic</a><br/>
                 <a href="Art.html#music" class="list-item"><img src="assets/images/icons/icon-guitar.png" width="20" height="20">Music</a><br/>
                 <a href="Art.html#otherart" class="list-item"><img src="assets/images/icons/icon-dino.png" width="20" height="20">Other</a>
+                </div>`,
+        'Interest': `
+            <div class="list-container">
+                <a href="Interest.html" class="list-item"> <img src="assets/images/icons/icon-duck.png" width="20" height="20"> Get to know me!</a><br/>
                 </div>`
+        
     };
 
     if (targetTitle && targetContent) {
