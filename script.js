@@ -12,26 +12,26 @@ function changeTextActivity(category) {
     const contentMap = {
         'Achievement': `
             <div class="list-container">
-                <a href="Achievement.html" class="list-item"> <img src="assets/images/icons/icon-flask.png" width="20" height="20"> Science project</a> <br/> 
-                <a href="Achievement.html#camp" class="list-item"><img src="assets/images/icons/icon-fire.png" width="20" height="20"> Camp</a> <br/>  
-                <a href="Achievement.html#other_activity" class="list-item"><img src="assets/images/icons/icon-medal.png" width="20" height="20"> POSN</a>
+                <a href="achievement.html" class="list-item"> <img src="assets/images/icons/icon-flask.png" width="20" height="20"> Science project</a> <br/> 
+                <a href="achievement.html#camp" class="list-item"><img src="assets/images/icons/icon-fire.png" width="20" height="20"> Camp</a> <br/>  
+                <a href="achievement.html#other_activity" class="list-item"><img src="assets/images/icons/icon-medal.png" width="20" height="20"> POSN</a>
             </div>`,
         'Activity': `
             <div class="list-container">
-                <a href="Activity.html" class="list-item"><img src="assets/images/icons/icon-star.png" width="20" height="20"> w/ SCIUS TU</a><br/>
-                <a href="Activity.html#skr" class="list-item"><img src="assets/images/icons/icon-carrot.png" width="20" height="20"> w/ SKR</a><br/>
-                <a href="Activity.html#skr" class="list-item"><img src="assets/images/icons/icon-guitar.png" width="20" height="20"> other</a>
+                <a href="activity.html" class="list-item"><img src="assets/images/icons/icon-star.png" width="20" height="20"> w/ SCIUS TU</a><br/>
+                <a href="activity.html#skr" class="list-item"><img src="assets/images/icons/icon-carrot.png" width="20" height="20"> w/ SKR</a><br/>
+                <a href="activity.html#skr" class="list-item"><img src="assets/images/icons/icon-guitar.png" width="20" height="20"> other</a>
             </div>`,
         'ART': `
             <div class="list-container">
-                <a href="Art.html" class="list-item"> <img src="assets/images/icons/icon-duck.png" width="20" height="20"> drawing</a><br/>
-                <a href="Art.html#graphic" class="list-item"><img src="assets/images/icons/icon-joystick.png" width="20" height="20"> graphic</a><br/>
-                <a href="Art.html#music" class="list-item"><img src="assets/images/icons/icon-guitar.png" width="20" height="20">Music</a><br/>
-                <a href="Art.html#otherart" class="list-item"><img src="assets/images/icons/icon-dino.png" width="20" height="20">Other</a>
+                <a href="art.html" class="list-item"> <img src="assets/images/icons/icon-duck.png" width="20" height="20"> drawing</a><br/>
+                <a href="art.html#graphic" class="list-item"><img src="assets/images/icons/icon-joystick.png" width="20" height="20"> graphic</a><br/>
+                <a href="art.html#music" class="list-item"><img src="assets/images/icons/icon-guitar.png" width="20" height="20">Music</a><br/>
+                <a href="art.html#otherart" class="list-item"><img src="assets/images/icons/icon-dino.png" width="20" height="20">Other</a>
                 </div>`,
         'Interest': `
             <div class="list-container">
-                <a href="Interest.html" class="list-item"> <img src="assets/images/icons/icon-duck.png" width="20" height="20"> Get to know me!</a><br/>
+                <a href="interest.html" class="list-item"> <img src="assets/images/icons/icon-duck.png" width="20" height="20"> Get to know me!</a><br/>
                 </div>`
         
     };
