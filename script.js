@@ -31,7 +31,7 @@ function changeTextActivity(category) {
                 </div>`,
         'Interest': `
             <div class="list-container">
-                <a href="interest.html" class="list-item"> <img src="assets/images/icons/icon-duck.png" width="20" height="20"> Get to know me here !</a><br/>
+                <a href="./interest.html" class="list-item"> <img src="assets/images/icons/icon-duck.png" width="20" height="20"> Get to know me here !</a><br/>
                 </div>`
         
     };
